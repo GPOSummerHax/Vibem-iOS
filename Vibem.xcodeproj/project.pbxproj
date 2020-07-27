@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40A953AA24CF463100E53379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953A924CF463100E53379 /* AppDelegate.swift */; };
+		40A953AC24CF463100E53379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953AB24CF463100E53379 /* SceneDelegate.swift */; };
+		40A953AE24CF463100E53379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953AD24CF463100E53379 /* ViewController.swift */; };
+		40A953B324CF463500E53379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A953B224CF463500E53379 /* Assets.xcassets */; };
+		40A953B624CF463500E53379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A953B424CF463500E53379 /* LaunchScreen.storyboard */; };
+		40A953BF24CF479400E53379 /* EmojiSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953BE24CF479400E53379 /* EmojiSelectView.swift */; };
+		62D701EB4D70C569486F2289 /* Pods_Vibem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135929D36AB1DFAD678A963D /* Pods_Vibem.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		135929D36AB1DFAD678A963D /* Pods_Vibem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vibem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A953A624CF463100E53379 /* Vibem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vibem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A953A924CF463100E53379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40A953AB24CF463100E53379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		40A953AD24CF463100E53379 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40A953B224CF463500E53379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40A953B524CF463500E53379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40A953B724CF463500E53379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40A953BE24CF479400E53379 /* EmojiSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSelectView.swift; sourceTree = "<group>"; };
+		6192FD171978AAFE1A0C329B /* Pods-Vibem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vibem.release.xcconfig"; path = "Target Support Files/Pods-Vibem/Pods-Vibem.release.xcconfig"; sourceTree = "<group>"; };
+		9C9287300FFBE357D73D8CAC /* Pods-Vibem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vibem.debug.xcconfig"; path = "Target Support Files/Pods-Vibem/Pods-Vibem.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40A953A324CF463100E53379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62D701EB4D70C569486F2289 /* Pods_Vibem.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40A9539D24CF463100E53379 = {
+			isa = PBXGroup;
+			children = (
+				40A953A824CF463100E53379 /* Vibem */,
+				40A953A724CF463100E53379 /* Products */,
+				59E18139AC6D07DBBB6FCC04 /* Pods */,
+				F8D2A04CD9FACA7F8E48CDDF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40A953A724CF463100E53379 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40A953A624CF463100E53379 /* Vibem.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40A953A824CF463100E53379 /* Vibem */ = {
+			isa = PBXGroup;
+			children = (
+				40A953A924CF463100E53379 /* AppDelegate.swift */,
+				40A953AB24CF463100E53379 /* SceneDelegate.swift */,
+				40A953AD24CF463100E53379 /* ViewController.swift */,
+				40A953BD24CF477000E53379 /* Views */,
+				40A953B224CF463500E53379 /* Assets.xcassets */,
+				40A953B424CF463500E53379 /* LaunchScreen.storyboard */,
+				40A953B724CF463500E53379 /* Info.plist */,
+			);
+			path = Vibem;
+			sourceTree = "<group>";
+		};
+		40A953BD24CF477000E53379 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40A953BE24CF479400E53379 /* EmojiSelectView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59E18139AC6D07DBBB6FCC04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C9287300FFBE357D73D8CAC /* Pods-Vibem.debug.xcconfig */,
+				6192FD171978AAFE1A0C329B /* Pods-Vibem.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F8D2A04CD9FACA7F8E48CDDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				135929D36AB1DFAD678A963D /* Pods_Vibem.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40A953A524CF463100E53379 /* Vibem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40A953BA24CF463500E53379 /* Build configuration list for PBXNativeTarget "Vibem" */;
+			buildPhases = (
+				50FC7D13E39755E96BB0F6B4 /* [CP] Check Pods Manifest.lock */,
+				40A953A224CF463100E53379 /* Sources */,
+				40A953A324CF463100E53379 /* Frameworks */,
+				40A953A424CF463100E53379 /* Resources */,
+				9DA8ABC3DEDF813D3CA6B7EA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vibem;
+			productName = Vibem;
+			productReference = 40A953A624CF463100E53379 /* Vibem.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40A9539E24CF463100E53379 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = GPOSummerHacks;
+				TargetAttributes = {
+					40A953A524CF463100E53379 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 40A953A124CF463100E53379 /* Build configuration list for PBXProject "Vibem" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40A9539D24CF463100E53379;
+			productRefGroup = 40A953A724CF463100E53379 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40A953A524CF463100E53379 /* Vibem */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40A953A424CF463100E53379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A953B624CF463500E53379 /* LaunchScreen.storyboard in Resources */,
+				40A953B324CF463500E53379 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50FC7D13E39755E96BB0F6B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vibem-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DA8ABC3DEDF813D3CA6B7EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vibem/Pods-Vibem-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vibem/Pods-Vibem-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vibem/Pods-Vibem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40A953A224CF463100E53379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A953AE24CF463100E53379 /* ViewController.swift in Sources */,
+				40A953AA24CF463100E53379 /* AppDelegate.swift in Sources */,
+				40A953AC24CF463100E53379 /* SceneDelegate.swift in Sources */,
+				40A953BF24CF479400E53379 /* EmojiSelectView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		40A953B424CF463500E53379 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40A953B524CF463500E53379 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40A953B824CF463500E53379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40A953B924CF463500E53379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40A953BB24CF463500E53379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C9287300FFBE357D73D8CAC /* Pods-Vibem.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Vibem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GPOSummerHacks.Vibem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40A953BC24CF463500E53379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6192FD171978AAFE1A0C329B /* Pods-Vibem.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Vibem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GPOSummerHacks.Vibem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40A953A124CF463100E53379 /* Build configuration list for PBXProject "Vibem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A953B824CF463500E53379 /* Debug */,
+				40A953B924CF463500E53379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40A953BA24CF463500E53379 /* Build configuration list for PBXNativeTarget "Vibem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A953BB24CF463500E53379 /* Debug */,
+				40A953BC24CF463500E53379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40A9539E24CF463100E53379 /* Project object */;
+}
