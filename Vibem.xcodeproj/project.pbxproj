@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4053F44224D1235C00A35083 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4053F44124D1235C00A35083 /* EmojiCollectionViewCell.swift */; };
+		4053F44424D1251600A35083 /* Character+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4053F44324D1251600A35083 /* Character+Extensions.swift */; };
+		4053F44624D1495F00A35083 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4053F44524D1495F00A35083 /* UIColor+Extensions.swift */; };
+		4053F44824D151F900A35083 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4053F44724D151F900A35083 /* AlertView.swift */; };
 		40A953AA24CF463100E53379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953A924CF463100E53379 /* AppDelegate.swift */; };
 		40A953AC24CF463100E53379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953AB24CF463100E53379 /* SceneDelegate.swift */; };
 		40A953AE24CF463100E53379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953AD24CF463100E53379 /* ViewController.swift */; };
 		40A953B324CF463500E53379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A953B224CF463500E53379 /* Assets.xcassets */; };
 		40A953B624CF463500E53379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A953B424CF463500E53379 /* LaunchScreen.storyboard */; };
 		40A953BF24CF479400E53379 /* EmojiSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953BE24CF479400E53379 /* EmojiSelectView.swift */; };
+		40A953C724CF4B5900E53379 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40A953C124CF4B5800E53379 /* DMSans-MediumItalic.ttf */; };
+		40A953C824CF4B5900E53379 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40A953C224CF4B5900E53379 /* DMSans-Bold.ttf */; };
+		40A953C924CF4B5900E53379 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40A953C324CF4B5900E53379 /* DMSans-Regular.ttf */; };
+		40A953CA24CF4B5900E53379 /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40A953C424CF4B5900E53379 /* DMSans-Italic.ttf */; };
+		40A953CB24CF4B5900E53379 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40A953C524CF4B5900E53379 /* DMSans-Medium.ttf */; };
+		40A953CC24CF4B5900E53379 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40A953C624CF4B5900E53379 /* DMSans-BoldItalic.ttf */; };
+		40A953CF24CF4C3800E53379 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953CE24CF4C3800E53379 /* UIFont+Extensions.swift */; };
+		40A953D124CF4CA300E53379 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953D024CF4CA300E53379 /* GlobalVariables.swift */; };
 		62D701EB4D70C569486F2289 /* Pods_Vibem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135929D36AB1DFAD678A963D /* Pods_Vibem.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		135929D36AB1DFAD678A963D /* Pods_Vibem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vibem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4053F44124D1235C00A35083 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
+		4053F44324D1251600A35083 /* Character+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Extensions.swift"; sourceTree = "<group>"; };
+		4053F44524D1495F00A35083 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		4053F44724D151F900A35083 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		40A953A624CF463100E53379 /* Vibem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vibem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A953A924CF463100E53379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40A953AB24CF463100E53379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +42,14 @@
 		40A953B524CF463500E53379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40A953B724CF463500E53379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40A953BE24CF479400E53379 /* EmojiSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSelectView.swift; sourceTree = "<group>"; };
+		40A953C124CF4B5800E53379 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		40A953C224CF4B5900E53379 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		40A953C324CF4B5900E53379 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		40A953C424CF4B5900E53379 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		40A953C524CF4B5900E53379 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		40A953C624CF4B5900E53379 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		40A953CE24CF4C3800E53379 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		40A953D024CF4CA300E53379 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		6192FD171978AAFE1A0C329B /* Pods-Vibem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vibem.release.xcconfig"; path = "Target Support Files/Pods-Vibem/Pods-Vibem.release.xcconfig"; sourceTree = "<group>"; };
 		9C9287300FFBE357D73D8CAC /* Pods-Vibem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vibem.debug.xcconfig"; path = "Target Support Files/Pods-Vibem/Pods-Vibem.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4053F44024D1234900A35083 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4053F44124D1235C00A35083 /* EmojiCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		40A9539D24CF463100E53379 = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +97,12 @@
 			children = (
 				40A953A924CF463100E53379 /* AppDelegate.swift */,
 				40A953AB24CF463100E53379 /* SceneDelegate.swift */,
+				40A953D024CF4CA300E53379 /* GlobalVariables.swift */,
 				40A953AD24CF463100E53379 /* ViewController.swift */,
+				4053F44024D1234900A35083 /* Cells */,
 				40A953BD24CF477000E53379 /* Views */,
+				40A953CD24CF4C2300E53379 /* Extensions */,
+				40A953C024CF4B3500E53379 /* Fonts */,
 				40A953B224CF463500E53379 /* Assets.xcassets */,
 				40A953B424CF463500E53379 /* LaunchScreen.storyboard */,
 				40A953B724CF463500E53379 /* Info.plist */,
@@ -77,9 +113,33 @@
 		40A953BD24CF477000E53379 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4053F44724D151F900A35083 /* AlertView.swift */,
 				40A953BE24CF479400E53379 /* EmojiSelectView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		40A953C024CF4B3500E53379 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				40A953C224CF4B5900E53379 /* DMSans-Bold.ttf */,
+				40A953C624CF4B5900E53379 /* DMSans-BoldItalic.ttf */,
+				40A953C424CF4B5900E53379 /* DMSans-Italic.ttf */,
+				40A953C524CF4B5900E53379 /* DMSans-Medium.ttf */,
+				40A953C124CF4B5800E53379 /* DMSans-MediumItalic.ttf */,
+				40A953C324CF4B5900E53379 /* DMSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		40A953CD24CF4C2300E53379 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4053F44324D1251600A35083 /* Character+Extensions.swift */,
+				4053F44524D1495F00A35083 /* UIColor+Extensions.swift */,
+				40A953CE24CF4C3800E53379 /* UIFont+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		59E18139AC6D07DBBB6FCC04 /* Pods */ = {
@@ -159,8 +219,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A953C924CF4B5900E53379 /* DMSans-Regular.ttf in Resources */,
+				40A953CB24CF4B5900E53379 /* DMSans-Medium.ttf in Resources */,
+				40A953C724CF4B5900E53379 /* DMSans-MediumItalic.ttf in Resources */,
+				40A953CC24CF4B5900E53379 /* DMSans-BoldItalic.ttf in Resources */,
 				40A953B624CF463500E53379 /* LaunchScreen.storyboard in Resources */,
 				40A953B324CF463500E53379 /* Assets.xcassets in Resources */,
+				40A953CA24CF4B5900E53379 /* DMSans-Italic.ttf in Resources */,
+				40A953C824CF4B5900E53379 /* DMSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,9 +279,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4053F44224D1235C00A35083 /* EmojiCollectionViewCell.swift in Sources */,
+				40A953D124CF4CA300E53379 /* GlobalVariables.swift in Sources */,
 				40A953AE24CF463100E53379 /* ViewController.swift in Sources */,
 				40A953AA24CF463100E53379 /* AppDelegate.swift in Sources */,
 				40A953AC24CF463100E53379 /* SceneDelegate.swift in Sources */,
+				4053F44824D151F900A35083 /* AlertView.swift in Sources */,
+				4053F44424D1251600A35083 /* Character+Extensions.swift in Sources */,
+				40A953CF24CF4C3800E53379 /* UIFont+Extensions.swift in Sources */,
+				4053F44624D1495F00A35083 /* UIColor+Extensions.swift in Sources */,
 				40A953BF24CF479400E53379 /* EmojiSelectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

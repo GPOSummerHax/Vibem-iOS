@@ -17,8 +17,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.setNavigationBarHidden(true, animated: false)
+        view.backgroundColor = .white
         
         view.addSubview(emojiSelectView)
+        
         
         setConstraints()
     }
