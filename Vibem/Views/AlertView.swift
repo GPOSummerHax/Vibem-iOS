@@ -15,7 +15,7 @@ class AlertView: UIView {
     private let alertView = UIView()
     private let alertLabel = UILabel()
     
-    init(alertText: String) {
+    init() {
         super.init(frame: .zero)
         
         isUserInteractionEnabled = false
@@ -34,7 +34,6 @@ class AlertView: UIView {
         alertView.layer.shadowOpacity = 1
         addSubview(alertView)
         
-        alertLabel.text = alertText
         alertLabel.font = ._14DMSansBold
         alertLabel.textColor = .black
         alertLabel.textAlignment = .center
@@ -61,8 +60,9 @@ class AlertView: UIView {
         }
     }
     
-    func present() {
+    func present(alertText: String) {
         isUserInteractionEnabled = true
+        alertLabel.text = alertText
         alertView.snp.remakeConstraints { make in
             make.centerX.centerY.equalToSuperview()
             make.width.equalTo(336 * screenWidthMultiplier)
