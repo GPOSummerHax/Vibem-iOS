@@ -8,5 +8,6 @@ target 'Vibem' do
   # Pods for Vibem
   pod 'Alamofire'
   pod 'SnapKit'
+  pod 'UIColor_Hex_Swift'
 
 end

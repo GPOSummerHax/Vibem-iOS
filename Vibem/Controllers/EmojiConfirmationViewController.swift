@@ -9,51 +9,40 @@
 import UIKit
 
 class EmojiConfirmationViewController: UIViewController {
-
-    private var completion: (() -> ())?
     
-    private let backButton = UIButton()
-    private let promptLabel = UILabel()
-    private let emojiTableView = UITableView()
-    private var emojiData: [(Character, UIColor)]!
-    
-    private let confirmButton = UIButton()
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-    }
-    
-    func configure(emojiData: [(Character, UIColor)], completion: (() -> ())? = nil) {
-        self.emojiData = emojiData
-        self.completion = completion
-        
+    private lazy var backButton: UIButton = {
+        let backButton = UIButton()
         backButton.setTitle("back", for: .normal)
         backButton.setTitleColor(.black, for: .normal)
         backButton.titleLabel?.font = ._18DMSansBold
         backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
-        view.addSubview(backButton)
-        
-        promptLabel.text = "\(testUser.name!), you picked these \(emojiData.count) emojis: "
+        return backButton
+    }()
+    
+    private lazy var promptLabel: UILabel = {
+        let promptLabel = UILabel()
+        promptLabel.text = promptLabelText
         promptLabel.textColor = .black
         promptLabel.font = ._20DMSansBold
         promptLabel.numberOfLines = 0
         promptLabel.textAlignment = .center
-        view.addSubview(promptLabel)
-        
+        return promptLabel
+    }()
+    
+    private lazy var emojiTableView: UITableView = {
+        let emojiTableView = UITableView()
+        emojiTableView.backgroundColor = .white
         emojiTableView.delegate = self
         emojiTableView.dataSource = self
         emojiTableView.register(EmojiConfirmationTableViewCell.self, forCellReuseIdentifier: EmojiConfirmationTableViewCell.identifier)
         emojiTableView.tableFooterView = UIView()
         emojiTableView.allowsSelection = false
         emojiTableView.isScrollEnabled = false
-        view.addSubview(emojiTableView)
-        emojiTableView.reloadData()
-        
+        return emojiTableView
+    }()
+    
+    private lazy var confirmButton: UIButton = {
+        let confirmButton = UIButton()
         confirmButton.setTitle("make your playlist", for: .normal)
         confirmButton.setTitleColor(.black, for: .normal)
         confirmButton.setTitleColor(.gray, for: .selected)
@@ -64,9 +53,47 @@ class EmojiConfirmationViewController: UIViewController {
         confirmButton.layer.shadowOffset = CGSize(width: 4, height: 4)
         confirmButton.layer.shadowRadius = 10 * screenHeightMultiplier
         confirmButton.layer.shadowOpacity = 1
+        return confirmButton
+    }()
+    
+    private var promptLabelText: String {
+        get {
+            let isPlural = Emojis.selected.count != 1
+            let thisThese = isPlural ? "these" : "this"
+            let emojiPlural = isPlural ? "emojis" : "emoji"
+            return "\(testUser.name!), you picked \(thisThese) \(Emojis.selected.count) \(emojiPlural): "
+        }
+    }
+        
+    private var completion: (() -> ())?
+        
+    init(completion: (() -> ())?) {
+        super.init(nibName: nil, bundle: nil)
+        self.completion = completion
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        
+        view.addSubview(backButton)
+        view.addSubview(promptLabel)
+        view.addSubview(emojiTableView)
         view.addSubview(confirmButton)
         
+        emojiTableView.reloadData()
+        
         setConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        emojiTableView.reloadData()
+        promptLabel.text = promptLabelText
+    }
+    
+    @objc private func backButtonPressed() {
+        navigationController?.popViewController(animated: true)
     }
     
     private func setConstraints() {
@@ -93,10 +120,6 @@ class EmojiConfirmationViewController: UIViewController {
         }
     }
     
-    @objc private func backButtonPressed() {
-        navigationController?.popViewController(animated: true)
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -105,13 +128,13 @@ class EmojiConfirmationViewController: UIViewController {
 extension EmojiConfirmationViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return emojiData.count
+        return Emojis.selected.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EmojiConfirmationTableViewCell.identifier, for: indexPath) as! EmojiConfirmationTableViewCell
-        let data = emojiData[indexPath.row]
-        cell.configure(emoji: data.0, backgroundColor: data.1, emojiDescription: "ryan got a cute ass")
+        let emojiObject = Array(Emojis.selected)[indexPath.row]
+        cell.configure(emojiObject: emojiObject)
         cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return cell
     }

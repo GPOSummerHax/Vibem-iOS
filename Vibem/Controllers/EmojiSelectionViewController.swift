@@ -11,72 +11,47 @@ import SnapKit
 
 class EmojiSelectionViewController: UIViewController {
 
-    private let promptLabel = UILabel()
-    private let instructionLabel = UILabel()
-    private let splashScreenInvisibleButton = UIButton()
-    
-    private var emojiCollectionView: UICollectionView!
-    private var emojiData: [[(Character, Bool, UIColor)]] = [ // triple (emoji, selected, backgroundColor)
-        [("😗", false, UIColor(hexCode: "#FFD94EFF")!), ("🎉", false, UIColor(hexCode: "#DDDF8BFF")!), ("🔮", false, UIColor(hexCode: "#F7C0FAFF")!), ("🔥", false, UIColor(hexCode: "#FFA40DFF")!)],
-        [("😔", false, UIColor(hexCode: "#DE7AD4FF")!), ("😈", false, UIColor(hexCode: "#DEA1EBFF")!), ("🤡", false, UIColor(hexCode: "#E77B6DFF")!)],
-        [("😇", false, UIColor(hexCode: "#5BAAFFFF")!), ("😎", false, UIColor(hexCode: "#DFC729FF")!), ("😱", false, UIColor(hexCode: "#CCD5FBFF")!), ("😴", false, UIColor(hexCode: "#CDD0D5FF")!)],
-        [("😻", false, UIColor(hexCode: "#FFF68DFF")!), ("👑", false, UIColor(hexCode: "#EDA8D0FF")!), ("🙈", false, UIColor(hexCode: "#E7DABCFF")!)],
-        [("🌿", false, UIColor(hexCode: "#87D333FF")!), ("😡", false, UIColor(hexCode: "#FECA69FF")!), ("🙌", false, UIColor(hexCode: "#74E980FF")!), ("🙄", false, UIColor(hexCode: "#FFCC91FF")!)],
-        [("✌️", false, UIColor(hexCode: "#D3E4FDFF")!), ("😒", false, UIColor(hexCode: "#FDF5CAFF")!), ("😜", false, UIColor(hexCode: "#FFEA3AFF")!)],
-        [("😣", false, UIColor(hexCode: "#EF97E6FF")!), ("😭", false, UIColor(hexCode: "#C0C0C0FF")!), ("☀️", false, UIColor(hexCode: "#FFFB99FF")!), ("🤓", false, UIColor(hexCode: "#B5D0DFFF")!)]
-    ]
-    private var selectedEmojis: [(Character, UIColor)] = []
-    
-    private let nextButton = UIButton()
-    private let alertView = AlertView()
-    private var completion: (([(Character, UIColor)]) -> ())?
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-    }
-    
-    func configure(completion: (([(Character, UIColor)]) -> ())? = nil, selectedEmojis: [(Character, UIColor)]? = nil) {
-        self.completion = completion
-        if let selectedEmojiData = selectedEmojis {
-            self.selectedEmojis = selectedEmojiData
-        }
-        
+    private lazy var promptLabel: UILabel = {
+        let promptLabel = UILabel()
         promptLabel.text = "how are you feeling?"
         promptLabel.textColor = .black
         promptLabel.textAlignment = .center
         promptLabel.font = ._24DMSansBold
-        view.addSubview(promptLabel)
-        
+        return promptLabel
+    }()
+    
+    private lazy var instructionLabel: UILabel = {
+        let instructionLabel = UILabel()
         instructionLabel.text = "select up to 5 emojis"
         instructionLabel.textColor = .lightGray
         instructionLabel.textAlignment = .center
         instructionLabel.font = ._14DMSansBold
-        view.addSubview(instructionLabel)
-        instructionLabel.alpha = 0
-        
+        return instructionLabel
+    }()
+    
+    private lazy var splashScreenInvisibleButton: UIButton = {
+        let splashScreenInvisibleButton = UIButton()
         splashScreenInvisibleButton.backgroundColor = .clear
         splashScreenInvisibleButton.addTarget(self, action: #selector(animateSplash), for: .touchUpInside)
-        view.addSubview(splashScreenInvisibleButton)
-        
+        return splashScreenInvisibleButton
+    }()
+    
+    private lazy var emojiCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = 30 * screenWidthMultiplier
-        layout.minimumLineSpacing = 18 * screenHeightMultiplier
-        emojiCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        layout.minimumInteritemSpacing = 25 * screenWidthMultiplier
+//        layout.minimumLineSpacing = 18 * screenHeightMultiplier
+        let emojiCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         emojiCollectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: EmojiCollectionViewCell.identifier)
         emojiCollectionView.dataSource = self
         emojiCollectionView.delegate = self
         emojiCollectionView.backgroundColor = .clear
-        emojiCollectionView.isScrollEnabled = true // true for debugging, false when finalized
-        view.addSubview(emojiCollectionView)
-        emojiCollectionView.alpha = 0
-        emojiCollectionView.isUserInteractionEnabled = false
-        
+        emojiCollectionView.isScrollEnabled = false  // true for debugging, false when finalized
+        return emojiCollectionView
+    }()
+    
+    private lazy var nextButton: UIButton = {
+        let nextButton = UIButton()
         nextButton.setTitle("next", for: .normal)
         nextButton.titleLabel?.font = ._18DMSansBold
         nextButton.setTitleColor(.black, for: .normal)
@@ -87,43 +62,40 @@ class EmojiSelectionViewController: UIViewController {
         nextButton.layer.shadowRadius = 10 * screenHeightMultiplier
         nextButton.layer.shadowOpacity = 1
         nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
+        return nextButton
+    }()
+    
+    private lazy var alertView = AlertView()
+    
+    private var completion: (() -> ())?
+        
+    init(completion: (() -> ())?) {
+        super.init(nibName: nil, bundle: nil)
+        self.completion = completion
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        view.addSubview(promptLabel)
+        view.addSubview(instructionLabel)
+        view.addSubview(splashScreenInvisibleButton)
+        view.addSubview(emojiCollectionView)
         view.addSubview(nextButton)
+        view.addSubview(alertView)
+        
+        instructionLabel.alpha = 0
+        
+        emojiCollectionView.alpha = 0
+        emojiCollectionView.isUserInteractionEnabled = false
+        
         nextButton.alpha = 0
         nextButton.isUserInteractionEnabled = false
         
         view.bringSubviewToFront(promptLabel)
-        
-        view.addSubview(alertView)
+        view.bringSubviewToFront(alertView)
 
         setConstraints()
-
-    }
-    
-    private func setConstraints() {
-        promptLabel.snp.makeConstraints { make in
-            make.centerX.centerY.width.equalToSuperview()
-            make.height.equalTo(31 * screenHeightMultiplier)
-        }
-        instructionLabel.snp.makeConstraints { make in
-            make.centerX.centerY.width.height.equalTo(promptLabel)
-        }
-        splashScreenInvisibleButton.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
-        }
-        emojiCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(106 * screenHeightMultiplier)
-            make.centerX.width.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(100 * screenHeightMultiplier)
-        }
-        nextButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(23 * screenHeightMultiplier)
-            make.width.equalTo(120 * screenWidthMultiplier)
-            make.height.equalTo(30 * screenHeightMultiplier)
-        }
-        alertView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
-        }
     }
     
     @objc private func animateSplash() {
@@ -132,7 +104,7 @@ class EmojiSelectionViewController: UIViewController {
             make.height.equalTo(31 * screenHeightMultiplier)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(37 * screenHeightMultiplier)
         }
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.25) {
             self.promptLabel.transform = self.promptLabel.transform.scaledBy(x: 20/24, y: 20/24)
             self.view.layoutIfNeeded()
             self.emojiCollectionView.alpha = 1
@@ -160,21 +132,45 @@ class EmojiSelectionViewController: UIViewController {
         }
     }
     
-    private func updateSelectedEmojis() {
-        let flattened = emojiData.reduce([], +)
-        selectedEmojis.removeAll()
-        for data in flattened {
-            if data.1 {
-                selectedEmojis.append((data.0, data.2))
-            }
+    @objc private func nextButtonPressed() {
+        if Emojis.selected.count == 0 {
+            alertView.present(alertText: "‼️ please select at least one emoji")
+        } else if Emojis.selected.count > 0 && Emojis.selected.count <= 5 {
+            completion?()
         }
     }
     
-    @objc private func nextButtonPressed() {
-        if selectedEmojis.count == 0 {
-            alertView.present(alertText: "‼️ please select at least one emoji")
-        } else if selectedEmojis.count > 0 && selectedEmojis.count <= 5 {
-            completion?(selectedEmojis)
+    private func setConstraints() {
+        let promptLabelHeight = 31 * screenHeightMultiplier
+        let collectionViewTopOffset = 106 * screenHeightMultiplier
+        let collectionViewBottomInset = 85 * screenHeightMultiplier
+        let nextButtonBottomInset = 23 * screenHeightMultiplier
+        let nextButtonWidth = 120 * screenWidthMultiplier
+        let nextButtonHeight = 30 * screenHeightMultiplier
+        
+        promptLabel.snp.makeConstraints { make in
+            make.centerX.centerY.width.equalToSuperview()
+            make.height.equalTo(promptLabelHeight)
+        }
+        instructionLabel.snp.makeConstraints { make in
+            make.centerX.centerY.width.height.equalTo(promptLabel)
+        }
+        splashScreenInvisibleButton.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
+        }
+        emojiCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(collectionViewTopOffset)
+            make.centerX.width.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(collectionViewBottomInset)
+        }
+        nextButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(nextButtonBottomInset)
+            make.width.equalTo(nextButtonWidth)
+            make.height.equalTo(nextButtonHeight)
+        }
+        alertView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
         }
     }
     
@@ -197,21 +193,28 @@ extension EmojiSelectionViewController : UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmojiCollectionViewCell.identifier, for: indexPath) as! EmojiCollectionViewCell
-        let data = emojiData[indexPath.section][indexPath.row]
-        cell.configure(emoji: data.0, backgroundColor: data.2)
-        if data.1 {
-            cell.toggleSelected()
-        }
+        let emojiObject = Emojis.objects[getEmojiIndex(from: indexPath)]
+        cell.configure(emojiObject: emojiObject)
         return cell
+    }
+    
+    private func getEmojiIndex(from indexPath: IndexPath) -> Int {
+        return indexPath.section / 2 * 7 + (indexPath.section % 2 == 0 ? 0 : 4) + indexPath.row
     }
     
     // MARK: UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if selectedEmojis.count < 5 || emojiData[indexPath.section][indexPath.row].1 {
-            let cell = collectionView.cellForItem(at: indexPath) as! EmojiCollectionViewCell
-            cell.toggleSelected()
-            emojiData[indexPath.section][indexPath.row].1.toggle()
-            updateSelectedEmojis()
+        let cell = collectionView.cellForItem(at: indexPath) as! EmojiCollectionViewCell
+        let emojiObject = cell.emojiObject!
+        let selected = Emojis.selected.contains(emojiObject)
+        
+        if Emojis.selected.count < 5 || selected {
+            cell.setSelected(to: !selected)
+            if selected {
+                Emojis.selected.remove(emojiObject)
+            } else {
+                Emojis.selected.insert(emojiObject)
+            }
         } else {
             alertView.present(alertText: "‼️ please select only up to 5 emojis")
             if instructionLabel.alpha == 0 {

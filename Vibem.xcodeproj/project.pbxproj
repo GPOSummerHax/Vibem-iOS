@@ -25,8 +25,9 @@
 		40A953CC24CF4B5900E53379 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40A953C624CF4B5900E53379 /* DMSans-BoldItalic.ttf */; };
 		40A953CF24CF4C3800E53379 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953CE24CF4C3800E53379 /* UIFont+Extensions.swift */; };
 		40A953D124CF4CA300E53379 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953D024CF4CA300E53379 /* GlobalVariables.swift */; };
+		40ED8EF224EE1478002A4495 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED8EF124EE1478002A4495 /* Emojis.swift */; };
+		40ED8EF424EE4225002A4495 /* EmojiCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED8EF324EE4224002A4495 /* EmojiCircleView.swift */; };
 		40F5A42E24D26BC200F3B804 /* EmojiConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5A42D24D26BC200F3B804 /* EmojiConfirmationViewController.swift */; };
-		40F5A43024D2707200F3B804 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5A42F24D2707200F3B804 /* EmojiView.swift */; };
 		40F5A43324D272AF00F3B804 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5A43224D272AF00F3B804 /* User.swift */; };
 		40F5A43524D2742C00F3B804 /* EmojiConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5A43424D2742C00F3B804 /* EmojiConfirmationTableViewCell.swift */; };
 		40F5A43824D2917400F3B804 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5A43724D2917400F3B804 /* Playlist.swift */; };
@@ -56,8 +57,9 @@
 		40A953C624CF4B5900E53379 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		40A953CE24CF4C3800E53379 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		40A953D024CF4CA300E53379 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		40ED8EF124EE1478002A4495 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
+		40ED8EF324EE4224002A4495 /* EmojiCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCircleView.swift; sourceTree = "<group>"; };
 		40F5A42D24D26BC200F3B804 /* EmojiConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConfirmationViewController.swift; sourceTree = "<group>"; };
-		40F5A42F24D2707200F3B804 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		40F5A43224D272AF00F3B804 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		40F5A43424D2742C00F3B804 /* EmojiConfirmationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConfirmationTableViewCell.swift; sourceTree = "<group>"; };
 		40F5A43724D2917400F3B804 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
@@ -129,9 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				4053F44724D151F900A35083 /* AlertView.swift */,
-				40F5A42D24D26BC200F3B804 /* EmojiConfirmationViewController.swift */,
-				40A953BE24CF479400E53379 /* EmojiSelectionViewController.swift */,
-				40F5A42F24D2707200F3B804 /* EmojiView.swift */,
+				40ED8EF324EE4224002A4495 /* EmojiCircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +165,7 @@
 				40F5A43224D272AF00F3B804 /* User.swift */,
 				40F5A43724D2917400F3B804 /* Playlist.swift */,
 				40F5A43924D2918E00F3B804 /* Song.swift */,
+				40ED8EF124EE1478002A4495 /* Emojis.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +173,8 @@
 		40F5A43624D2868400F3B804 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				40A953BE24CF479400E53379 /* EmojiSelectionViewController.swift */,
+				40F5A42D24D26BC200F3B804 /* EmojiConfirmationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40ED8EF224EE1478002A4495 /* Emojis.swift in Sources */,
 				40F5A43324D272AF00F3B804 /* User.swift in Sources */,
 				4053F44224D1235C00A35083 /* EmojiCollectionViewCell.swift in Sources */,
 				40A953D124CF4CA300E53379 /* GlobalVariables.swift in Sources */,
@@ -320,10 +324,10 @@
 				40A953AA24CF463100E53379 /* AppDelegate.swift in Sources */,
 				40F5A43524D2742C00F3B804 /* EmojiConfirmationTableViewCell.swift in Sources */,
 				40A953AC24CF463100E53379 /* SceneDelegate.swift in Sources */,
-				40F5A43024D2707200F3B804 /* EmojiView.swift in Sources */,
 				4053F44824D151F900A35083 /* AlertView.swift in Sources */,
 				4053F44424D1251600A35083 /* Character+Extensions.swift in Sources */,
 				40A953CF24CF4C3800E53379 /* UIFont+Extensions.swift in Sources */,
+				40ED8EF424EE4225002A4495 /* EmojiCircleView.swift in Sources */,
 				4053F44624D1495F00A35083 /* UIColor+Extensions.swift in Sources */,
 				40F5A43A24D2918E00F3B804 /* Song.swift in Sources */,
 				40A953BF24CF479400E53379 /* EmojiSelectionViewController.swift in Sources */,
@@ -466,12 +470,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U723H4F8DG;
 				INFOPLIST_FILE = Vibem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = GPOSummerHacks.Vibem;
+				PRODUCT_BUNDLE_IDENTIFIER = GPO.Vibem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,12 +489,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U723H4F8DG;
 				INFOPLIST_FILE = Vibem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = GPOSummerHacks.Vibem;
+				PRODUCT_BUNDLE_IDENTIFIER = GPO.Vibem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -10,27 +10,34 @@ import UIKit
 import SnapKit
 
 class EmojiCollectionViewCell: UICollectionViewCell {
+    
     static let identifier = "EmojiCollectionViewCell"
     
-    private var emojiView: EmojiView!
-    private let checkCircleView = UIView()
+    var emojiObject: EmojiObject!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    public func configure(emoji: Character, backgroundColor: UIColor) {
+    private lazy var emojiView: UIView = {
+        let emojiView = UIView()
+        emojiView.backgroundColor = emojiObject.backgroundColor
+        emojiView.layer.cornerRadius = 30 * screenHeightMultiplier
+        emojiView.layer.borderColor = UIColor("#B5B5B5FF").cgColor
+        emojiView.clipsToBounds = true
         
-        self.backgroundColor = .clear
-        clipsToBounds = false
-        
-        emojiView = EmojiView(emoji: emoji, backgroundColor: backgroundColor)
-        addSubview(emojiView)
-        emojiView.snp.makeConstraints { make in
+        let emojiLabel = UILabel()
+        emojiLabel.text = emojiObject.emoji.isEmoji ? String(emojiObject.emoji) : "🤡"
+        emojiLabel.backgroundColor = .clear
+        emojiLabel.font = emojiLabel.font.withSize(30 * screenHeightMultiplier)
+        emojiLabel.textAlignment = .center
+        emojiView.addSubview(emojiLabel)
+        emojiLabel.snp.makeConstraints { make in
             make.centerX.centerY.width.height.equalToSuperview()
         }
         
-        checkCircleView.backgroundColor = UIColor(hexCode: "#D5E0A6FF")
+        return emojiView
+    }()
+    
+    private lazy var checkCircleView: UIView = {
+        let checkCircleView = UIView()
+        checkCircleView.backgroundColor = UIColor("#D5E0A6FF")
         checkCircleView.layer.cornerRadius = 11.5 * screenHeightMultiplier
         checkCircleView.layer.borderColor = UIColor.white.cgColor
         checkCircleView.layer.borderWidth = 3 * screenHeightMultiplier
@@ -40,22 +47,52 @@ class EmojiCollectionViewCell: UICollectionViewCell {
             make.centerX.centerY.equalToSuperview()
             make.height.width.equalTo(10)
         }
+        return checkCircleView
+    }()
+    
+    
+    public var isChecked: Bool {
+        get {
+            return Emojis.selected.contains(emojiObject)
+        }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    public func configure(emojiObject: EmojiObject) {
+        self.backgroundColor = .clear
+        clipsToBounds = false
+        self.emojiObject = emojiObject
+        
+        addSubview(emojiView)
         addSubview(checkCircleView)
+        
+        checkCircleView.alpha = 0
+        
+        setConstraints()
+        
+        setSelected(to: isChecked)
+    }
+    
+    public func setSelected(to isSelected: Bool) {
+        UIView.animate(withDuration: 0.25) {
+            self.emojiView.layer.borderWidth = isSelected ? 3 * screenHeightMultiplier : 0
+            self.checkCircleView.alpha = isSelected ? 1 : 0
+        }
+    }
+    
+    private func setConstraints() {
+        emojiView.snp.makeConstraints { make in
+            make.centerX.centerY.width.height.equalToSuperview()
+        }
         checkCircleView.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(5 * screenHeightMultiplier)
             make.top.equalToSuperview().offset(-5 * screenHeightMultiplier)
             make.height.width.equalTo(23 * screenHeightMultiplier)
         }
-        checkCircleView.alpha = 0
     }
-    
-    public func toggleSelected() {
-        UIView.animate(withDuration: 0.25) {
-            self.emojiView.layer.borderWidth = self.emojiView.layer.borderWidth == 3 * screenHeightMultiplier ? 0 : 3 * screenHeightMultiplier
-            self.checkCircleView.alpha = self.checkCircleView.alpha == 1 ? 0 : 1
-        }
-    }
-
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -11,20 +11,27 @@ import SnapKit
 
 class RootViewController: UIViewController {
 
-    private let emojiSelectionViewController = EmojiSelectionViewController()
-    private let emojiConfirmationViewController = EmojiConfirmationViewController()
+    private lazy var emojiSelectionViewController: EmojiSelectionViewController = {
+        return EmojiSelectionViewController(completion: emojiSelectionCompletion)
+    }()
+    
+    private lazy var emojiConfirmationViewController: EmojiConfirmationViewController = {
+        return EmojiConfirmationViewController(completion: emojiConfirmCompletion)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
         
-        emojiSelectionViewController.configure(completion: emojiSelectionCompletion)
         navigationController?.pushViewController(emojiSelectionViewController, animated: false)
     }
     
-    private func emojiSelectionCompletion(emojiData: [(Character, UIColor)]) {
-        emojiConfirmationViewController.configure(emojiData: emojiData)
+    private func emojiSelectionCompletion() {
         navigationController?.pushViewController(emojiConfirmationViewController, animated: true)
+    }
+    
+    private func emojiConfirmCompletion() {
+        print("confirmed")
     }
 }
 

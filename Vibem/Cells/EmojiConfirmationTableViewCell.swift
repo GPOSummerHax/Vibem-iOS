@@ -9,23 +9,67 @@
 import UIKit
 
 class EmojiConfirmationTableViewCell: UITableViewCell {
-
     static let identifier = "EmojiConfirmationTableViewCell"
-    private var emojiView: EmojiView!
-    private var emojiDescriptionLabel = UILabel()
+    
+    private lazy var emojiLabel: UILabel = {
+        let emojiLabel = UILabel()
+        emojiLabel.text = emojiLabelText
+        emojiLabel.backgroundColor = .clear
+        emojiLabel.font = emojiLabel.font.withSize(30 * screenHeightMultiplier)
+        emojiLabel.textAlignment = .center
+        return emojiLabel
+    }()
+    
+    private lazy var emojiView: UIView = {
+        let emojiView = UIView()
+        emojiView.backgroundColor = emojiObject.backgroundColor
+        emojiView.layer.cornerRadius = 30 * screenHeightMultiplier
+        emojiView.layer.borderColor = UIColor("#B5B5B5FF").cgColor
+        emojiView.clipsToBounds = true
+        
+        emojiView.addSubview(emojiLabel)
+        emojiLabel.snp.makeConstraints { make in
+            make.centerX.centerY.width.height.equalToSuperview()
+        }
+        
+        return emojiView
+    }()
+    
+    private lazy var emojiDescriptionLabel: UILabel = {
+        let emojiDescriptionLabel = UILabel()
+        emojiDescriptionLabel.text = emojiDescription
+        emojiDescriptionLabel.textColor = .black
+        emojiDescriptionLabel.font = ._18DMSansBold
+        emojiDescriptionLabel.numberOfLines = 0
+        return emojiDescriptionLabel
+    }()
+    
+    private var emojiObject: EmojiObject!
+    private var emojiLabelText: String {
+        get {
+            return emojiObject.emoji.isEmoji ? String(emojiObject.emoji) : "🤡"
+        }
+    }
+    
+    private var emojiDescription: String? {
+        get {
+            return Emojis.description(for: emojiObject.emoji)
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .white
+        contentView.backgroundColor = .white
     }
     
-    func configure(emoji: Character, backgroundColor: UIColor, emojiDescription: String) {
-        emojiView = EmojiView(emoji: emoji, backgroundColor: backgroundColor)
-        contentView.addSubview(emojiView)
+    func configure(emojiObject: EmojiObject) {
+        self.emojiObject = emojiObject
         
-        emojiDescriptionLabel.text = emojiDescription
-        emojiDescriptionLabel.font = ._18DMSansBold
-        emojiDescriptionLabel.numberOfLines = 0
+        contentView.addSubview(emojiView)
         contentView.addSubview(emojiDescriptionLabel)
+        
+        emojiLabel.text = emojiLabelText
         
         setConstraints()
     }

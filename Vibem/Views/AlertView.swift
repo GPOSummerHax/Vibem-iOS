@@ -9,35 +9,45 @@
 import UIKit
 
 class AlertView: UIView {
-
-    private var blurView: UIVisualEffectView!
-    private let blurViewAlpha: CGFloat = 1
-    private let alertView = UIView()
-    private let alertLabel = UILabel()
     
-    init() {
-        super.init(frame: .zero)
-        
-        isUserInteractionEnabled = false
-        
+    private lazy var blurView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .systemThinMaterial)
-        blurView = UIVisualEffectView(effect: blurEffect)
+        let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.alpha = blurViewAlpha
         blurView.backgroundColor = .clear
-        addSubview(blurView)
-        
+        return blurView
+    }()
+    
+    private lazy var alertView: UIView = {
+        let alertView = UIView()
         alertView.backgroundColor = .white
         alertView.layer.cornerRadius = 10 * screenHeightMultiplier
         alertView.layer.shadowColor = UIColor(white: 0, alpha: 0.15).cgColor
         alertView.layer.shadowOffset = CGSize(width: 0, height: 4)
         alertView.layer.shadowRadius = 4 * screenHeightMultiplier
         alertView.layer.shadowOpacity = 1
-        addSubview(alertView)
-        
+        return alertView
+    }()
+    
+    private lazy var alertLabel: UILabel = {
+        let alertLabel = UILabel()
         alertLabel.font = ._14DMSansBold
         alertLabel.textColor = .black
         alertLabel.textAlignment = .center
         alertLabel.numberOfLines = 0
+        return alertLabel
+    }()
+
+    private let blurViewAlpha: CGFloat = 1
+    private let animationDuration: TimeInterval = 0.25
+    
+    init() {
+        super.init(frame: .zero)
+        
+        isUserInteractionEnabled = false
+        
+        addSubview(blurView)
+        addSubview(alertView)
         alertView.addSubview(alertLabel)
         
         blurView.alpha = 0
@@ -69,7 +79,7 @@ class AlertView: UIView {
             make.height.equalTo(58 * screenHeightMultiplier)
         }
         
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: animationDuration) {
             self.layoutIfNeeded()
             self.blurView.alpha = self.blurViewAlpha
         }
@@ -83,7 +93,7 @@ class AlertView: UIView {
             make.width.equalTo(336 * screenWidthMultiplier)
             make.height.equalTo(58 * screenHeightMultiplier)
         }
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: animationDuration) {
             self.layoutIfNeeded()
             self.blurView.alpha = 0
         }
