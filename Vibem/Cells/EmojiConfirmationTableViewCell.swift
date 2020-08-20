@@ -11,27 +11,8 @@ import UIKit
 class EmojiConfirmationTableViewCell: UITableViewCell {
     static let identifier = "EmojiConfirmationTableViewCell"
     
-    private lazy var emojiLabel: UILabel = {
-        let emojiLabel = UILabel()
-        emojiLabel.text = emojiLabelText
-        emojiLabel.backgroundColor = .clear
-        emojiLabel.font = emojiLabel.font.withSize(30 * screenHeightMultiplier)
-        emojiLabel.textAlignment = .center
-        return emojiLabel
-    }()
-    
-    private lazy var emojiView: UIView = {
-        let emojiView = UIView()
-        emojiView.backgroundColor = emojiObject.backgroundColor
-        emojiView.layer.cornerRadius = 30 * screenHeightMultiplier
-        emojiView.layer.borderColor = UIColor("#B5B5B5FF").cgColor
-        emojiView.clipsToBounds = true
-        
-        emojiView.addSubview(emojiLabel)
-        emojiLabel.snp.makeConstraints { make in
-            make.centerX.centerY.width.height.equalToSuperview()
-        }
-        
+    private lazy var emojiView: EmojiCircleView = {
+        let emojiView = EmojiCircleView(emojiObject: emojiObject)
         return emojiView
     }()
     
@@ -69,7 +50,7 @@ class EmojiConfirmationTableViewCell: UITableViewCell {
         contentView.addSubview(emojiView)
         contentView.addSubview(emojiDescriptionLabel)
         
-        emojiLabel.text = emojiLabelText
+        emojiView.update(to: emojiObject)
         
         setConstraints()
     }

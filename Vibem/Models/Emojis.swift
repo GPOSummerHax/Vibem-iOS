@@ -22,12 +22,12 @@ class EmojiObject: Hashable, CustomStringConvertible {
     }
     
     init(of emoji: Character, backgroundColorHex: String) {
-        self.emoji = emoji
+        self.emoji = emoji.isEmoji ? emoji : "🤡"
         self.backgroundColor = UIColor(backgroundColorHex)
     }
     
     init(of emoji: Character, backgroundColor: UIColor) {
-        self.emoji = emoji
+        self.emoji = emoji.isEmoji ? emoji : "🤡"
         self.backgroundColor = backgroundColor
     }
     

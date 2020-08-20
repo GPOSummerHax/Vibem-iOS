@@ -15,23 +15,8 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     
     var emojiObject: EmojiObject!
     
-    private lazy var emojiView: UIView = {
-        let emojiView = UIView()
-        emojiView.backgroundColor = emojiObject.backgroundColor
-        emojiView.layer.cornerRadius = 30 * screenHeightMultiplier
-        emojiView.layer.borderColor = UIColor("#B5B5B5FF").cgColor
-        emojiView.clipsToBounds = true
-        
-        let emojiLabel = UILabel()
-        emojiLabel.text = emojiObject.emoji.isEmoji ? String(emojiObject.emoji) : "🤡"
-        emojiLabel.backgroundColor = .clear
-        emojiLabel.font = emojiLabel.font.withSize(30 * screenHeightMultiplier)
-        emojiLabel.textAlignment = .center
-        emojiView.addSubview(emojiLabel)
-        emojiLabel.snp.makeConstraints { make in
-            make.centerX.centerY.width.height.equalToSuperview()
-        }
-        
+    private lazy var emojiView: EmojiCircleView = {
+        let emojiView = EmojiCircleView(emojiObject: emojiObject)
         return emojiView
     }()
     
@@ -69,6 +54,7 @@ class EmojiCollectionViewCell: UICollectionViewCell {
         addSubview(emojiView)
         addSubview(checkCircleView)
         
+        emojiView.update(to: emojiObject)
         checkCircleView.alpha = 0
         
         setConstraints()
