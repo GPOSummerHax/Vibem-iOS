@@ -21,10 +21,10 @@ class AlertView: UIView {
     private lazy var alertView: UIView = {
         let alertView = UIView()
         alertView.backgroundColor = .white
-        alertView.layer.cornerRadius = 10 * screenHeightMultiplier
+        alertView.layer.cornerRadius = 10 * heightMultiplier
         alertView.layer.shadowColor = UIColor(white: 0, alpha: 0.15).cgColor
         alertView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        alertView.layer.shadowRadius = 4 * screenHeightMultiplier
+        alertView.layer.shadowRadius = 4 * heightMultiplier
         alertView.layer.shadowOpacity = 1
         return alertView
     }()
@@ -62,8 +62,8 @@ class AlertView: UIView {
         alertView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(self.snp.bottom).offset(20)
-            make.width.equalTo(336 * screenWidthMultiplier)
-            make.height.equalTo(58 * screenHeightMultiplier)
+            make.width.equalTo(336 * widthMultiplier)
+            make.height.equalTo(58 * heightMultiplier)
         }
         alertLabel.snp.makeConstraints { make in
             make.width.height.centerX.centerY.equalToSuperview()
@@ -75,8 +75,8 @@ class AlertView: UIView {
         alertLabel.text = alertText
         alertView.snp.remakeConstraints { make in
             make.centerX.centerY.equalToSuperview()
-            make.width.equalTo(336 * screenWidthMultiplier)
-            make.height.equalTo(58 * screenHeightMultiplier)
+            make.width.equalTo(336 * widthMultiplier)
+            make.height.equalTo(58 * heightMultiplier)
         }
         
         UIView.animate(withDuration: animationDuration) {
@@ -90,8 +90,8 @@ class AlertView: UIView {
         alertView.snp.remakeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(self.snp.bottom).offset(20)
-            make.width.equalTo(336 * screenWidthMultiplier)
-            make.height.equalTo(58 * screenHeightMultiplier)
+            make.width.equalTo(336 * widthMultiplier)
+            make.height.equalTo(58 * heightMultiplier)
         }
         UIView.animate(withDuration: animationDuration) {
             self.layoutIfNeeded()

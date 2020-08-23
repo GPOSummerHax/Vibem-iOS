@@ -57,13 +57,13 @@ class EmojiConfirmationTableViewCell: UITableViewCell {
     
     private func setConstraints() {
         emojiView.snp.makeConstraints { make in
-            make.height.width.equalTo(60 * screenWidthMultiplier)
+            make.height.width.equalTo(60 * widthMultiplier)
             make.leading.centerY.equalToSuperview()
         }
         emojiDescriptionLabel.snp.makeConstraints { make in
-            make.leading.equalTo(emojiView.snp.trailing).offset(20 * screenWidthMultiplier)
+            make.leading.equalTo(emojiView.snp.trailing).offset(20 * widthMultiplier)
             make.centerY.trailing.equalToSuperview()
-            make.height.equalTo(30 * screenHeightMultiplier)
+            make.height.equalTo(30 * heightMultiplier)
         }
     }
     

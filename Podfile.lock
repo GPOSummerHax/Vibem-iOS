@@ -1,24 +1,40 @@
 PODS:
   - Alamofire (5.1.0)
   - SnapKit (5.0.1)
+  - Stellar (0.67)
+  - SwiftyJSON (5.0.0)
   - UIColor_Hex_Swift (5.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - SnapKit
+  - Stellar (from `https://github.com/AugustRush/Stellar.git`)
+  - SwiftyJSON
   - UIColor_Hex_Swift
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - SnapKit
+    - SwiftyJSON
     - UIColor_Hex_Swift
+
+EXTERNAL SOURCES:
+  Stellar:
+    :git: https://github.com/AugustRush/Stellar.git
+
+CHECKOUT OPTIONS:
+  Stellar:
+    :commit: 6c192427621f8b52f3b155d0088e1eabd156abe0
+    :git: https://github.com/AugustRush/Stellar.git
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Stellar: df980becd194eeb62d623af097582da0ef2219b9
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: a20bfa2b95fdee4e1151aefe3657ebc86fdb56c0
+PODFILE CHECKSUM: 3c64b6cad0afcff4259a745fd3ec11f4b7ad1b45
 
 COCOAPODS: 1.9.1

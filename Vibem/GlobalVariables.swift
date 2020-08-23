@@ -8,10 +8,12 @@
 
 import UIKit
 
+// MARK: Testing
 let testing: Bool = true
-
-// multipliers scaled to iPhone 11 Pro screen dimensions
-let screenWidthMultiplier: CGFloat = UIScreen.main.bounds.width / 375
-let screenHeightMultiplier: CGFloat = UIScreen.main.bounds.height / 812
-
 let testUser = User(_id: "testUserId", name: "Ryan")
+
+// MARK: Relative Screen Constants
+let widthMultiplier: CGFloat = UIScreen.main.bounds.width / 375
+let heightMultiplier: CGFloat = UIScreen.main.bounds.height / 812
+
+

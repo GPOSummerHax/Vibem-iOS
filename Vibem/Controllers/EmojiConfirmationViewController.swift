@@ -48,10 +48,10 @@ class EmojiConfirmationViewController: UIViewController {
         confirmButton.setTitleColor(.gray, for: .selected)
         confirmButton.titleLabel?.font = ._18DMSansBold
         confirmButton.backgroundColor = UIColor(white: 241/255, alpha: 1)
-        confirmButton.layer.cornerRadius = 15 * screenHeightMultiplier
+        confirmButton.layer.cornerRadius = 15 * heightMultiplier
         confirmButton.layer.shadowColor = UIColor(white: 0, alpha: 0.15).cgColor
         confirmButton.layer.shadowOffset = CGSize(width: 4, height: 4)
-        confirmButton.layer.shadowRadius = 10 * screenHeightMultiplier
+        confirmButton.layer.shadowRadius = 10 * heightMultiplier
         confirmButton.layer.shadowOpacity = 1
         return confirmButton
     }()
@@ -99,24 +99,24 @@ class EmojiConfirmationViewController: UIViewController {
     private func setConstraints() {
         backButton.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
-            make.leading.equalToSuperview().offset(15 * screenHeightMultiplier)
+            make.leading.equalToSuperview().offset(15 * heightMultiplier)
         }
         promptLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaInsets).offset(85 * screenHeightMultiplier)
-            make.width.equalTo(300 * screenWidthMultiplier)
+            make.top.equalTo(view.safeAreaInsets).offset(85 * heightMultiplier)
+            make.width.equalTo(300 * widthMultiplier)
         }
         emojiTableView.snp.makeConstraints { make in
-            let sideInset: CGFloat = 25 * screenWidthMultiplier
+            let sideInset: CGFloat = 25 * widthMultiplier
             make.trailing.leading.equalToSuperview().inset(sideInset)
-            make.top.equalTo(promptLabel.snp.bottom).offset(25 * screenHeightMultiplier)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(30 * screenHeightMultiplier)
+            make.top.equalTo(promptLabel.snp.bottom).offset(25 * heightMultiplier)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(30 * heightMultiplier)
         }
         confirmButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(23 * screenHeightMultiplier)
-            make.width.equalTo(200 * screenWidthMultiplier)
-            make.height.equalTo(30 * screenHeightMultiplier)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(23 * heightMultiplier)
+            make.width.equalTo(200 * widthMultiplier)
+            make.height.equalTo(30 * heightMultiplier)
         }
     }
     
@@ -145,6 +145,6 @@ extension EmojiConfirmationViewController: UITableViewDataSource, UITableViewDel
 //    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100 * screenHeightMultiplier
+        return 100 * heightMultiplier
     }
 }

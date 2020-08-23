@@ -9,9 +9,9 @@
 import UIKit
 
 extension UIFont {
-    static let _14DMSansBold = UIFont(name: "DMSans-Bold", size: 14 * screenHeightMultiplier)
-    static let _18DMSansBold = UIFont(name: "DMSans-Bold", size: 18 * screenHeightMultiplier)
-    static let _24DMSansBold = UIFont(name: "DMSans-Bold", size: 24 * screenHeightMultiplier)
-    static let _20DMSansBold = UIFont(name: "DMSans-Bold", size: 20 * screenHeightMultiplier)
-    static let _32DMSansBold = UIFont(name: "DMSans-Bold", size: 32 * screenHeightMultiplier)
+    static let _14DMSansBold = UIFont(name: "DMSans-Bold", size: 14 * heightMultiplier)
+    static let _18DMSansBold = UIFont(name: "DMSans-Bold", size: 18 * heightMultiplier)
+    static let _24DMSansBold = UIFont(name: "DMSans-Bold", size: 24 * heightMultiplier)
+    static let _20DMSansBold = UIFont(name: "DMSans-Bold", size: 20 * heightMultiplier)
+    static let _32DMSansBold = UIFont(name: "DMSans-Bold", size: 32 * heightMultiplier)
 }

@@ -23,9 +23,9 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     private lazy var checkCircleView: UIView = {
         let checkCircleView = UIView()
         checkCircleView.backgroundColor = UIColor("#D5E0A6FF")
-        checkCircleView.layer.cornerRadius = 11.5 * screenHeightMultiplier
+        checkCircleView.layer.cornerRadius = 11.5 * heightMultiplier
         checkCircleView.layer.borderColor = UIColor.white.cgColor
-        checkCircleView.layer.borderWidth = 3 * screenHeightMultiplier
+        checkCircleView.layer.borderWidth = 3 * heightMultiplier
         let checkMark = UIImageView(image: UIImage(named: "checkMark"))
         checkCircleView.addSubview(checkMark)
         checkMark.snp.makeConstraints { make in
@@ -64,7 +64,7 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     
     public func setSelected(to isSelected: Bool) {
         UIView.animate(withDuration: 0.25) {
-            self.emojiView.layer.borderWidth = isSelected ? 3 * screenHeightMultiplier : 0
+            self.emojiView.layer.borderWidth = isSelected ? 3 * heightMultiplier : 0
             self.checkCircleView.alpha = isSelected ? 1 : 0
         }
     }
@@ -74,9 +74,9 @@ class EmojiCollectionViewCell: UICollectionViewCell {
             make.centerX.centerY.width.height.equalToSuperview()
         }
         checkCircleView.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().offset(5 * screenHeightMultiplier)
-            make.top.equalToSuperview().offset(-5 * screenHeightMultiplier)
-            make.height.width.equalTo(23 * screenHeightMultiplier)
+            make.trailing.equalToSuperview().offset(5 * heightMultiplier)
+            make.top.equalToSuperview().offset(-5 * heightMultiplier)
+            make.height.width.equalTo(23 * heightMultiplier)
         }
     }
     

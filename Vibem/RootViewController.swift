@@ -23,7 +23,8 @@ class RootViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
         
-        navigationController?.pushViewController(emojiSelectionViewController, animated: false)
+        navigationController?.pushViewController(AuthViewController(), animated: false)
+//        navigationController?.pushViewController(emojiSelectionViewController, animated: false)
     }
     
     private func emojiSelectionCompletion() {

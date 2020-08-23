@@ -9,5 +9,6 @@ target 'Vibem' do
   pod 'Alamofire'
   pod 'SnapKit'
   pod 'UIColor_Hex_Swift'
-
+  pod 'Stellar', :git => 'https://github.com/AugustRush/Stellar.git'
+  pod 'SwiftyJSON'
 end

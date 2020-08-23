@@ -10,6 +10,8 @@ import UIKit
 
 extension UIColor {
     
+    static let spotifyGreen = UIColor("#1DB954")
+    
     func image(_ size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
         // e.g. for setBackgroundImage in button to a specific color
         return UIGraphicsImageRenderer(size: size).image { renderedContext in

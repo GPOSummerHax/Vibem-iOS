@@ -14,7 +14,7 @@ class EmojiCircleView: UIView {
         let emojiLabel = UILabel()
         emojiLabel.text = emojiLabelText
         emojiLabel.backgroundColor = .clear
-        emojiLabel.font = emojiLabel.font.withSize(30 * screenHeightMultiplier)
+        emojiLabel.font = emojiLabel.font.withSize(30 * heightMultiplier)
         emojiLabel.textAlignment = .center
         return emojiLabel
     }()
@@ -33,7 +33,7 @@ class EmojiCircleView: UIView {
         self.emojiObject = emojiObject
         
         backgroundColor = emojiObject.backgroundColor
-        layer.cornerRadius = 30 * screenHeightMultiplier
+        layer.cornerRadius = 30 * heightMultiplier
         layer.borderColor = UIColor("#B5B5B5FF").cgColor
         clipsToBounds = true
         

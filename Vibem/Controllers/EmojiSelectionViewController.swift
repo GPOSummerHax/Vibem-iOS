@@ -39,7 +39,7 @@ class EmojiSelectionViewController: UIViewController {
     private lazy var emojiCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = 25 * screenWidthMultiplier
+        layout.minimumInteritemSpacing = 25 * widthMultiplier
 //        layout.minimumLineSpacing = 18 * screenHeightMultiplier
         let emojiCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         emojiCollectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: EmojiCollectionViewCell.identifier)
@@ -56,10 +56,10 @@ class EmojiSelectionViewController: UIViewController {
         nextButton.titleLabel?.font = ._18DMSansBold
         nextButton.setTitleColor(.black, for: .normal)
         nextButton.backgroundColor = UIColor(white: 241/255, alpha: 1)
-        nextButton.layer.cornerRadius = 15 * screenHeightMultiplier
+        nextButton.layer.cornerRadius = 15 * heightMultiplier
         nextButton.layer.shadowColor = UIColor(white: 0, alpha: 0.15).cgColor
         nextButton.layer.shadowOffset = CGSize(width: 4, height: 4)
-        nextButton.layer.shadowRadius = 10 * screenHeightMultiplier
+        nextButton.layer.shadowRadius = 10 * heightMultiplier
         nextButton.layer.shadowOpacity = 1
         nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
         return nextButton
@@ -101,8 +101,8 @@ class EmojiSelectionViewController: UIViewController {
     @objc private func animateSplash() {
         promptLabel.snp.remakeConstraints { make in
             make.centerX.width.equalToSuperview()
-            make.height.equalTo(31 * screenHeightMultiplier)
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(37 * screenHeightMultiplier)
+            make.height.equalTo(31 * heightMultiplier)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(37 * heightMultiplier)
         }
         UIView.animate(withDuration: 0.25) {
             self.promptLabel.transform = self.promptLabel.transform.scaledBy(x: 20/24, y: 20/24)
@@ -118,13 +118,13 @@ class EmojiSelectionViewController: UIViewController {
     private func showInstructionLabel() {
         promptLabel.snp.remakeConstraints { make in
             make.centerX.width.equalToSuperview()
-            make.height.equalTo(31 * screenHeightMultiplier)
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(28 * screenHeightMultiplier)
+            make.height.equalTo(31 * heightMultiplier)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(28 * heightMultiplier)
         }
         instructionLabel.snp.remakeConstraints { make in
             make.centerX.width.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(61 * screenHeightMultiplier)
-            make.height.equalTo(18 * screenHeightMultiplier)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(61 * heightMultiplier)
+            make.height.equalTo(18 * heightMultiplier)
         }
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
@@ -141,12 +141,12 @@ class EmojiSelectionViewController: UIViewController {
     }
     
     private func setConstraints() {
-        let promptLabelHeight = 31 * screenHeightMultiplier
-        let collectionViewTopOffset = 106 * screenHeightMultiplier
-        let collectionViewBottomInset = 85 * screenHeightMultiplier
-        let nextButtonBottomInset = 23 * screenHeightMultiplier
-        let nextButtonWidth = 120 * screenWidthMultiplier
-        let nextButtonHeight = 30 * screenHeightMultiplier
+        let promptLabelHeight = 31 * heightMultiplier
+        let collectionViewTopOffset = 106 * heightMultiplier
+        let collectionViewBottomInset = 85 * heightMultiplier
+        let nextButtonBottomInset = 23 * heightMultiplier
+        let nextButtonWidth = 120 * widthMultiplier
+        let nextButtonHeight = 30 * heightMultiplier
         
         promptLabel.snp.makeConstraints { make in
             make.centerX.centerY.width.equalToSuperview()
@@ -225,7 +225,7 @@ extension EmojiSelectionViewController : UICollectionViewDataSource, UICollectio
     
     // MARK: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 60 * screenHeightMultiplier, height: 60 * screenHeightMultiplier)
+        return CGSize(width: 60 * heightMultiplier, height: 60 * heightMultiplier)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
