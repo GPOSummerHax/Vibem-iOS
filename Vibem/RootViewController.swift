@@ -11,7 +11,10 @@ import SnapKit
 
 class RootViewController: UIViewController {
     
-    internal lazy var authVC = AuthViewController()
+    internal lazy var authVC: AuthViewController = {
+        let authVC = AuthViewController(completion: authCompletion)
+        return authVC
+    }()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +22,13 @@ class RootViewController: UIViewController {
 //        for i in 0..<5 {
 //            Emojis.selected.insert(Emojis.objects[i])
 //        }
-        let emojiSelectionVC = EmojiSelectionViewController(completion: emojiSelectionCompletion)
         navigationController?.setNavigationBarHidden(true, animated: false)
-        navigationController?.pushViewController(emojiSelectionVC, animated: false)
+        navigationController?.pushViewController(authVC, animated: false)
+    }
+    
+    private func authCompletion() {
+        let emojiSelectionVC = EmojiSelectionViewController(completion: emojiSelectionCompletion)
+        navigationController?.pushViewController(emojiSelectionVC, animated: true)
     }
     
     private func emojiSelectionCompletion() {

@@ -70,7 +70,8 @@ class EmojiConfirmationViewController: UIViewController {
             let isPlural = Emojis.selected.count != 1
             let thisThese = isPlural ? "these" : "this"
             let emojiPlural = isPlural ? "emojis" : "emoji"
-            return "\(testUser.name!), you picked \(thisThese) \(Emojis.selected.count) \(emojiPlural): "
+            let name = testUser?.name ?? "Ryan"
+            return "\(name), you picked \(thisThese) \(Emojis.selected.count) \(emojiPlural): "
         }
     }
     
@@ -113,13 +114,13 @@ class EmojiConfirmationViewController: UIViewController {
         }
         promptLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaInsets).offset(85 * heightMultiplier)
+            make.top.equalTo(view.safeAreaInsets).offset(95 * heightMultiplier)
             make.width.equalTo(300 * widthMultiplier)
         }
         emojiTableView.snp.makeConstraints { make in
             let sideInset: CGFloat = 25 * widthMultiplier
             make.trailing.leading.equalToSuperview().inset(sideInset)
-            make.top.equalTo(promptLabel.snp.bottom).offset(25 * heightMultiplier)
+            make.top.equalTo(promptLabel.snp.bottom).offset(15 * heightMultiplier)
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(30 * heightMultiplier)
         }
         confirmButton.snp.makeConstraints { make in

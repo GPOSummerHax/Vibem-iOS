@@ -10,7 +10,8 @@ import UIKit
 
 // MARK: Testing
 let testing: Bool = true
-let testUser = User(_id: "testUserId", name: "Ryan")
+var testUser: User? = User(_id: "testUserId", name: "Ryan") 
+var spotifySessionManager: SPTSessionManager?
 
 // MARK: Relative Screen Constants
 let widthMultiplier: CGFloat = UIScreen.main.bounds.width / 375

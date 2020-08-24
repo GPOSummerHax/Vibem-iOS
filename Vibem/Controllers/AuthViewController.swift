@@ -36,6 +36,13 @@ class AuthViewController: UIViewController, SPTSessionManagerDelegate {
     }()
     
     // MARK: Initialize View
+    var completion: (() -> ())?
+    
+    init(completion: (() -> ())?) {
+        super.init(nibName: nil, bundle: nil)
+        self.completion = completion
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -56,6 +63,10 @@ class AuthViewController: UIViewController, SPTSessionManagerDelegate {
             make.centerX.width.equalToSuperview()
             make.top.equalTo(loginButton.snp.bottom).offset(infoLabelTopOffset)
         }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: SPT Config
@@ -92,8 +103,11 @@ class AuthViewController: UIViewController, SPTSessionManagerDelegate {
                 self.sessionManager.renewSession()
             })
         }
-        NetworkManager.getUserName(accessToken: session.accessToken) { userName in
-            self.infoLabel.text = "logged in as: \(userName)"
+        spotifySessionManager = sessionManager
+        NetworkManager.getDisplayName(accessToken: session.accessToken) { displayName in
+            self.infoLabel.text = "logged in as: \(displayName)"
+            testUser = User(_id: "", name: displayName)
+            self.completion?()
         }
     }
     

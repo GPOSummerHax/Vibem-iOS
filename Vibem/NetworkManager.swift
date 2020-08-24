@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class NetworkManager {
     
-    static func getUserName(accessToken: String, completion: @escaping ((String) -> ())) {
+    static func getDisplayName(accessToken: String, completion: @escaping ((String) -> ())) {
         let endpoint: String = "https://api.spotify.com/v1/me"
         let headers = HTTPHeaders([
             "Authorization" : "Bearer " + accessToken
