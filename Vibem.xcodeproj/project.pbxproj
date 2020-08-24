@@ -14,6 +14,7 @@
 		40603D7524F1E4D700331888 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40603D7424F1E4D700331888 /* AuthViewController.swift */; };
 		40603D7824F202FF00331888 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40603D7724F2028400331888 /* SpotifyiOS.framework */; };
 		40603D7C24F224F500331888 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40603D7B24F224F500331888 /* NetworkManager.swift */; };
+		407B870E24F338B900D7B16D /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407B870D24F338B900D7B16D /* LoadingAnimationView.swift */; };
 		40A953AA24CF463100E53379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953A924CF463100E53379 /* AppDelegate.swift */; };
 		40A953AE24CF463100E53379 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953AD24CF463100E53379 /* RootViewController.swift */; };
 		40A953B324CF463500E53379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A953B224CF463500E53379 /* Assets.xcassets */; };
@@ -29,7 +30,6 @@
 		40A953D124CF4CA300E53379 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953D024CF4CA300E53379 /* GlobalVariables.swift */; };
 		40ED8EF224EE1478002A4495 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED8EF124EE1478002A4495 /* Emojis.swift */; };
 		40ED8EF424EE4225002A4495 /* EmojiCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED8EF324EE4224002A4495 /* EmojiCircleView.swift */; };
-		40ED8EFD24EEF65D002A4495 /* LoadingPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED8EFC24EEF65D002A4495 /* LoadingPlaylistViewController.swift */; };
 		40F5A42E24D26BC200F3B804 /* EmojiConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5A42D24D26BC200F3B804 /* EmojiConfirmationViewController.swift */; };
 		40F5A43324D272AF00F3B804 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5A43224D272AF00F3B804 /* User.swift */; };
 		40F5A43524D2742C00F3B804 /* EmojiConfirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5A43424D2742C00F3B804 /* EmojiConfirmationTableViewCell.swift */; };
@@ -48,6 +48,7 @@
 		40603D7624F1FFA200331888 /* Vibem-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vibem-Bridging-Header.h"; sourceTree = "<group>"; };
 		40603D7724F2028400331888 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		40603D7B24F224F500331888 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		407B870D24F338B900D7B16D /* LoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
 		40A953A624CF463100E53379 /* Vibem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vibem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A953A924CF463100E53379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40A953AD24CF463100E53379 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		40A953D024CF4CA300E53379 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		40ED8EF124EE1478002A4495 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		40ED8EF324EE4224002A4495 /* EmojiCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCircleView.swift; sourceTree = "<group>"; };
-		40ED8EFC24EEF65D002A4495 /* LoadingPlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPlaylistViewController.swift; sourceTree = "<group>"; };
 		40F5A42D24D26BC200F3B804 /* EmojiConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConfirmationViewController.swift; sourceTree = "<group>"; };
 		40F5A43224D272AF00F3B804 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		40F5A43424D2742C00F3B804 /* EmojiConfirmationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConfirmationTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +141,7 @@
 			children = (
 				4053F44724D151F900A35083 /* AlertView.swift */,
 				40ED8EF324EE4224002A4495 /* EmojiCircleView.swift */,
+				407B870D24F338B900D7B16D /* LoadingAnimationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,10 +183,9 @@
 		40F5A43624D2868400F3B804 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				40603D7424F1E4D700331888 /* AuthViewController.swift */,
 				40A953BE24CF479400E53379 /* EmojiSelectionViewController.swift */,
 				40F5A42D24D26BC200F3B804 /* EmojiConfirmationViewController.swift */,
-				40ED8EFC24EEF65D002A4495 /* LoadingPlaylistViewController.swift */,
-				40603D7424F1E4D700331888 /* AuthViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,8 +336,8 @@
 				40A953AE24CF463100E53379 /* RootViewController.swift in Sources */,
 				40A953AA24CF463100E53379 /* AppDelegate.swift in Sources */,
 				40F5A43524D2742C00F3B804 /* EmojiConfirmationTableViewCell.swift in Sources */,
-				40ED8EFD24EEF65D002A4495 /* LoadingPlaylistViewController.swift in Sources */,
 				4053F44824D151F900A35083 /* AlertView.swift in Sources */,
+				407B870E24F338B900D7B16D /* LoadingAnimationView.swift in Sources */,
 				4053F44424D1251600A35083 /* Character+Extensions.swift in Sources */,
 				40A953CF24CF4C3800E53379 /* UIFont+Extensions.swift in Sources */,
 				40ED8EF424EE4225002A4495 /* EmojiCircleView.swift in Sources */,
@@ -490,6 +490,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Vibem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,7 +517,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vibem-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -532,6 +533,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Vibem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +560,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vibem-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -11,6 +11,7 @@ import SnapKit
 
 class EmojiSelectionViewController: UIViewController {
 
+    // MARK: Subviews
     private lazy var promptLabel: UILabel = {
         let promptLabel = UILabel()
         promptLabel.text = "how are you feeling?"
@@ -40,7 +41,6 @@ class EmojiSelectionViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 25 * widthMultiplier
-//        layout.minimumLineSpacing = 18 * screenHeightMultiplier
         let emojiCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         emojiCollectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: EmojiCollectionViewCell.identifier)
         emojiCollectionView.dataSource = self
@@ -66,6 +66,8 @@ class EmojiSelectionViewController: UIViewController {
     }()
     
     private lazy var alertView = AlertView()
+    
+    // MARK: Initialize & Layout
     
     private var completion: (() -> ())?
         
@@ -98,6 +100,50 @@ class EmojiSelectionViewController: UIViewController {
         setConstraints()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.layoutIfNeeded()
+    }
+    
+    private func setConstraints() {
+        let promptLabelHeight = 31 * heightMultiplier
+        let collectionViewTopOffset = 106 * heightMultiplier
+        let collectionViewBottomInset = 85 * heightMultiplier
+        let nextButtonBottomInset = 23 * heightMultiplier
+        let nextButtonWidth = 120 * widthMultiplier
+        let nextButtonHeight = 30 * heightMultiplier
+        
+        promptLabel.snp.makeConstraints { make in
+            make.centerX.centerY.width.equalToSuperview()
+            make.height.equalTo(promptLabelHeight)
+        }
+        instructionLabel.snp.makeConstraints { make in
+            make.centerX.centerY.width.height.equalTo(promptLabel)
+        }
+        splashScreenInvisibleButton.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
+        }
+        emojiCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(collectionViewTopOffset)
+            make.centerX.width.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(collectionViewBottomInset)
+        }
+        nextButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(nextButtonBottomInset)
+            make.width.equalTo(nextButtonWidth)
+            make.height.equalTo(nextButtonHeight)
+        }
+        alertView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: Actions
     @objc private func animateSplash() {
         promptLabel.snp.remakeConstraints { make in
             make.centerX.width.equalToSuperview()
@@ -139,45 +185,6 @@ class EmojiSelectionViewController: UIViewController {
             completion?()
         }
     }
-    
-    private func setConstraints() {
-        let promptLabelHeight = 31 * heightMultiplier
-        let collectionViewTopOffset = 106 * heightMultiplier
-        let collectionViewBottomInset = 85 * heightMultiplier
-        let nextButtonBottomInset = 23 * heightMultiplier
-        let nextButtonWidth = 120 * widthMultiplier
-        let nextButtonHeight = 30 * heightMultiplier
-        
-        promptLabel.snp.makeConstraints { make in
-            make.centerX.centerY.width.equalToSuperview()
-            make.height.equalTo(promptLabelHeight)
-        }
-        instructionLabel.snp.makeConstraints { make in
-            make.centerX.centerY.width.height.equalTo(promptLabel)
-        }
-        splashScreenInvisibleButton.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
-        }
-        emojiCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(collectionViewTopOffset)
-            make.centerX.width.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(collectionViewBottomInset)
-        }
-        nextButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(nextButtonBottomInset)
-            make.width.equalTo(nextButtonWidth)
-            make.height.equalTo(nextButtonHeight)
-        }
-        alertView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
-        }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 }
 
 

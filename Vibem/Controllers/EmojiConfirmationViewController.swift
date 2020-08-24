@@ -10,12 +10,13 @@ import UIKit
 
 class EmojiConfirmationViewController: UIViewController {
     
+    // MARK: Subviews
     private lazy var backButton: UIButton = {
         let backButton = UIButton()
         backButton.setTitle("back", for: .normal)
-        backButton.setTitleColor(.black, for: .normal)
+        backButton.setTitleColor(.gray, for: .normal)
         backButton.titleLabel?.font = ._18DMSansBold
-        backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         return backButton
     }()
     
@@ -53,9 +54,17 @@ class EmojiConfirmationViewController: UIViewController {
         confirmButton.layer.shadowOffset = CGSize(width: 4, height: 4)
         confirmButton.layer.shadowRadius = 10 * heightMultiplier
         confirmButton.layer.shadowOpacity = 1
+        confirmButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
         return confirmButton
     }()
     
+    private lazy var loadingAnimationView: LoadingAnimationView = {
+        let loadingAnimationView = LoadingAnimationView()
+        loadingAnimationView.frame = view.frame
+        return loadingAnimationView
+    }()
+    
+    // MARK: Computed Vars
     private var promptLabelText: String {
         get {
             let isPlural = Emojis.selected.count != 1
@@ -64,12 +73,15 @@ class EmojiConfirmationViewController: UIViewController {
             return "\(testUser.name!), you picked \(thisThese) \(Emojis.selected.count) \(emojiPlural): "
         }
     }
-        
+    
+    // MARK: Initialize & Layout
+    
     private var completion: (() -> ())?
         
     init(completion: (() -> ())?) {
         super.init(nibName: nil, bundle: nil)
         self.completion = completion
+        self.modalPresentationStyle = .fullScreen
     }
     
     override func viewDidLoad() {
@@ -80,6 +92,7 @@ class EmojiConfirmationViewController: UIViewController {
         view.addSubview(promptLabel)
         view.addSubview(emojiTableView)
         view.addSubview(confirmButton)
+        view.addSubview(loadingAnimationView)
         
         emojiTableView.reloadData()
         
@@ -90,10 +103,7 @@ class EmojiConfirmationViewController: UIViewController {
         super.viewWillAppear(animated)
         emojiTableView.reloadData()
         promptLabel.text = promptLabelText
-    }
-    
-    @objc private func backButtonPressed() {
-        navigationController?.popViewController(animated: true)
+        view.layoutIfNeeded()
     }
     
     private func setConstraints() {
@@ -122,6 +132,15 @@ class EmojiConfirmationViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: Actions
+    @objc private func backButtonTapped() {
+        self.dismiss(animated: true)
+    }
+    
+    @objc private func confirmButtonTapped() {
+        loadingAnimationView.present()
     }
 }
 
