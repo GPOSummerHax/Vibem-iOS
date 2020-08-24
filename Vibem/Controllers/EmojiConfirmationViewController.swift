@@ -142,6 +142,7 @@ class EmojiConfirmationViewController: UIViewController {
     
     @objc private func confirmButtonTapped() {
         loadingAnimationView.present()
+        NetworkManager.getTestPlaylist()
     }
 }
 

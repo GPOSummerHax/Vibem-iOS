@@ -40,7 +40,7 @@ class NetworkManager {
     static func renewSession(completion: @escaping ((Bool) -> ())) {
         let refreshToken = userDefaults.string(forKey: UserDefaultsKeys.refreshToken) ?? ""
         let parameters: [String : String] = [
-            "refresh_token" : "\(refreshToken)"
+            "refresh_token" : refreshToken
         ]
         AF.request(
             tokenRefreshURLString,
@@ -60,7 +60,30 @@ class NetworkManager {
                     print(json)
                     completion(true)
                 }
-            default: break
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    static func getTestPlaylist() {
+        let accessToken = userDefaults.string(forKey: UserDefaultsKeys.accessToken) ?? ""
+        let parameters: [String: String] = [
+            "access_token" : accessToken
+        ]
+        AF.request(
+            "https://vibem-4dca1.web.app/playlist",
+            method: .get,
+            parameters: parameters,
+            encoder: URLEncodedFormParameterEncoder.default,
+            headers: nil
+        ).responseData { response in
+            switch response.result {
+            case .success(let data):
+                let json = JSON(data)
+                print(json)
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
