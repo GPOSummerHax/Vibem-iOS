@@ -12,17 +12,23 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    lazy var rootVC = RootViewController()
+    lazy var rootVC = RootViewController.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = UINavigationController(rootViewController: rootVC)
+        
+        userDefaults.register(defaults: [
+            UserDefaultsKeys.userID : "defaultID",
+            UserDefaultsKeys.userDisplayName: "defaultDisplayName",
+        ])
+        
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        rootVC.authVC.sessionManager.application(app, open: url, options: options)
+        sessionManager.application(app, open: url, options: options)
         return true
     }
     

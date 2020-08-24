@@ -70,29 +70,8 @@ class AuthViewController: UIViewController, SPTSessionManagerDelegate {
     }
     
     // MARK: SPT Config
-    private let clientID = "78ce7ecf29e84f9197bd9a9c80843618"
-    private let redirectURLString = "gpo-vibem://spotify-login-callback"
-    private let tokenSwapURLString = "https://gpo-vibem.herokuapp.com/api/token"
-    private let tokenRefreshURLString = "https://gpo-vibem.herokuapp.com/api/refresh_token"
-    private let callMeMaybe = "spotify:track:20I6sIOMTCkB6w7ryavxtO"
-    private let scope: SPTScope = [
-        .userFollowRead
-    ]
-    private var refreshTimer: Timer?
     
-    private lazy var config: SPTConfiguration = {
-        let config = SPTConfiguration(clientID: clientID, redirectURL: URL(string: redirectURLString)!)
-        config.playURI = callMeMaybe
-        config.tokenSwapURL = URL(string: tokenSwapURLString)!
-        config.tokenRefreshURL = URL(string: tokenRefreshURLString)!
-        return config
-    }()
-
-    internal lazy var sessionManager: SPTSessionManager = {
-        let manager = SPTSessionManager(configuration: config, delegate: self)
-        manager.alwaysShowAuthorizationDialog = false
-        return manager
-    }()
+    private var refreshTimer: Timer?
 
     // MARK: SPTSessionManagerDelegate
     func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
@@ -100,13 +79,14 @@ class AuthViewController: UIViewController, SPTSessionManagerDelegate {
         refreshTimer?.invalidate()
         DispatchQueue.main.async {
             self.refreshTimer = Timer.scheduledTimer(withTimeInterval: 3598, repeats: false, block: { (timer) in
-                self.sessionManager.renewSession()
+                Vibem.sessionManager.renewSession()
             })
         }
-        spotifySessionManager = sessionManager
         NetworkManager.getDisplayName(accessToken: session.accessToken) { displayName in
             self.infoLabel.text = "logged in as: \(displayName)"
-            testUser = User(_id: "", name: displayName)
+            userDefaults.setValue(displayName, forKey: UserDefaultsKeys.userDisplayName)
+            userDefaults.setValue(session.refreshToken, forKey: UserDefaultsKeys.refreshToken)
+            userDefaults.setValue(session.accessToken, forKey: UserDefaultsKeys.accessToken)
             self.completion?()
         }
     }
@@ -115,7 +95,7 @@ class AuthViewController: UIViewController, SPTSessionManagerDelegate {
         presentAlertController(title: "Session Renewed", message: session.description, buttonTitle: "Sweet")
         DispatchQueue.main.async {
             self.refreshTimer = Timer.scheduledTimer(withTimeInterval: 3598, repeats: false, block: { (timer) in
-                self.sessionManager.renewSession()
+                Vibem.sessionManager.renewSession()
             })
         }
     }
@@ -127,7 +107,7 @@ class AuthViewController: UIViewController, SPTSessionManagerDelegate {
     // MARK: Actions
     @objc private func loginButtonTapped() {
         let scope: SPTScope = [.userFollowRead]
-        sessionManager.initiateSession(with: scope, options: .default)
+        Vibem.sessionManager.initiateSession(with: scope, options: .default)
     }
     
     private func presentAlertController(title: String, message: String, buttonTitle: String) {

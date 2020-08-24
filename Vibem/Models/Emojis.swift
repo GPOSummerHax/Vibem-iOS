@@ -43,11 +43,7 @@ class EmojiObject: Hashable, CustomStringConvertible {
 
 class Emojis {
     
-    static var selected = Set<EmojiObject>() {
-        didSet {
-            print(selected)
-        }
-    }
+    static var selected = Set<EmojiObject>()
     
     static let objects: [EmojiObject] = [
         EmojiObject(of: "😗", backgroundColorHex: "#FFD94EFF"),

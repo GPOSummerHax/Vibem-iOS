@@ -70,7 +70,7 @@ class EmojiConfirmationViewController: UIViewController {
             let isPlural = Emojis.selected.count != 1
             let thisThese = isPlural ? "these" : "this"
             let emojiPlural = isPlural ? "emojis" : "emoji"
-            let name = testUser?.name ?? "Ryan"
+            let name = userDefaults.string(forKey: UserDefaultsKeys.userDisplayName) ?? "Ryan"
             return "\(name), you picked \(thisThese) \(Emojis.selected.count) \(emojiPlural): "
         }
     }

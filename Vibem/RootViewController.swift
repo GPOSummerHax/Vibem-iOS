@@ -10,20 +10,28 @@ import UIKit
 import SnapKit
 
 class RootViewController: UIViewController {
+    static let shared = RootViewController()
     
     internal lazy var authVC: AuthViewController = {
         let authVC = AuthViewController(completion: authCompletion)
         return authVC
     }()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // testing loadingAnimationView
-//        for i in 0..<5 {
-//            Emojis.selected.insert(Emojis.objects[i])
-//        }
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        navigationController?.pushViewController(authVC, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: false)        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NetworkManager.renewSession { isSuccessful in
+            if isSuccessful {
+                let emojiSelectionVC = EmojiSelectionViewController(completion: self.emojiSelectionCompletion)
+                self.navigationController?.pushViewController(emojiSelectionVC, animated: false)
+            } else {
+                self.navigationController?.pushViewController(self.authVC, animated: false)
+            }
+        }
     }
     
     private func authCompletion() {

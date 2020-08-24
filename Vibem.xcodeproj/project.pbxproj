@@ -15,6 +15,7 @@
 		40603D7824F202FF00331888 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40603D7724F2028400331888 /* SpotifyiOS.framework */; };
 		40603D7C24F224F500331888 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40603D7B24F224F500331888 /* NetworkManager.swift */; };
 		407B870E24F338B900D7B16D /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407B870D24F338B900D7B16D /* LoadingAnimationView.swift */; };
+		407B871224F35D1C00D7B16D /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407B871124F35D1C00D7B16D /* UserDefaultsKeys.swift */; };
 		40A953AA24CF463100E53379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953A924CF463100E53379 /* AppDelegate.swift */; };
 		40A953AE24CF463100E53379 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A953AD24CF463100E53379 /* RootViewController.swift */; };
 		40A953B324CF463500E53379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A953B224CF463500E53379 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		40603D7724F2028400331888 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		40603D7B24F224F500331888 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		407B870D24F338B900D7B16D /* LoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
+		407B871124F35D1C00D7B16D /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		40A953A624CF463100E53379 /* Vibem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vibem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A953A924CF463100E53379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40A953AD24CF463100E53379 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				40A953D024CF4CA300E53379 /* GlobalVariables.swift */,
 				40A953AD24CF463100E53379 /* RootViewController.swift */,
 				40603D7B24F224F500331888 /* NetworkManager.swift */,
+				407B871124F35D1C00D7B16D /* UserDefaultsKeys.swift */,
 				4053F44024D1234900A35083 /* Cells */,
 				40F5A43624D2868400F3B804 /* Controllers */,
 				40F5A43124D2729800F3B804 /* Models */,
@@ -340,6 +343,7 @@
 				407B870E24F338B900D7B16D /* LoadingAnimationView.swift in Sources */,
 				4053F44424D1251600A35083 /* Character+Extensions.swift in Sources */,
 				40A953CF24CF4C3800E53379 /* UIFont+Extensions.swift in Sources */,
+				407B871224F35D1C00D7B16D /* UserDefaultsKeys.swift in Sources */,
 				40ED8EF424EE4225002A4495 /* EmojiCircleView.swift in Sources */,
 				4053F44624D1495F00A35083 /* UIColor+Extensions.swift in Sources */,
 				40F5A43A24D2918E00F3B804 /* Song.swift in Sources */,

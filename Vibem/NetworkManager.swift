@@ -36,4 +36,32 @@ class NetworkManager {
             }
         }
     }
+    
+    static func renewSession(completion: @escaping ((Bool) -> ())) {
+        let refreshToken = userDefaults.string(forKey: UserDefaultsKeys.refreshToken) ?? ""
+        let parameters: [String : String] = [
+            "refresh_token" : "\(refreshToken)"
+        ]
+        AF.request(
+            tokenRefreshURLString,
+            method: .post,
+            parameters: parameters,
+            encoder: URLEncodedFormParameterEncoder.default,
+            headers: nil
+        ).responseData { response in
+            switch response.result {
+            case .success(let data):
+                let json = JSON(data)
+                if let _ = json["error"].string {
+                    completion(false)
+                } else {
+                    guard let accessToken = json["access_token"].string else { return }
+                    userDefaults.setValue(accessToken, forKey: UserDefaultsKeys.accessToken)
+                    print(json)
+                    completion(true)
+                }
+            default: break
+            }
+        }
+    }
 }
