@@ -15,7 +15,6 @@
 		06AFC0F22C5C46E14866A8B84FAB799A /* Value+Physical.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A941EFE22E1C2F02C7F967B9977779 /* Value+Physical.swift */; };
 		08281777D479CF46F0E0F24753E01A63 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF3F5CC246516F9498EAD649FB50CA /* Request.swift */; };
 		0FF6A3BBA9E9DAAE2E741513546FC4B6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CB0E3293271A7D22CC9121C3C73089 /* Validation.swift */; };
-		14BC4BF9F898B0233267B1880A5E8E86 /* Pods-Vibem-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB149CB2E71A952F93D4886E43EB11C /* Pods-Vibem-dummy.m */; };
 		165F498AB8762893E957BCE0D70F4439 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF593A30F64C9BEA1E69A97C6A184D7 /* AFError.swift */; };
 		17967C3B89F947AB34C7248CA1AE52AB /* AnimationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C106C8A1C62045966087239577DD8E /* AnimationStep.swift */; };
 		1942F7D3B7722A5637C3FC0BE44B1E6C /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA9634E822F2C951562EC96D74264C7F /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,10 +43,10 @@
 		3BFC243AB9BD579969F0D5756560BCAA /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3488EF9D912BC24C5A85884B5EDC8863 /* Constraint.swift */; };
 		3E5285F4F36EAD77ECABBFB7F36BB1BB /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFDEAA6C28EEAF2B0554D9D3FBE6E67 /* ConstraintView+Extensions.swift */; };
 		408258CCC9DF9A5BD371EBEC8286CD81 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C246B60D0089B69687451583D6C44B8 /* RetryPolicy.swift */; };
+		41104FE5C372B8ED97B000C6BF5EE96E /* Pods-Vibem-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB149CB2E71A952F93D4886E43EB11C /* Pods-Vibem-dummy.m */; };
 		433815428539A3F818A385B0EFEFB8DC /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589ED3DD4CC917FED69D4D51B9E92C10 /* DispatchQueue+Alamofire.swift */; };
 		464450D037D17ED5EE2322E180A6A9F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C6137E6EEF0ABD65DC1A4DE9C0F15C /* Foundation.framework */; };
 		4808FBE94178151017653C2E6EFF138E /* TimingSolvable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8826AF84155ED232562F1FA8EFBAFF /* TimingSolvable.swift */; };
-		48C1922FDE367B998E920D6A895990CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C6137E6EEF0ABD65DC1A4DE9C0F15C /* Foundation.framework */; };
 		4AAB3F2054BD0939C95D961A3BAA43B4 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DF4CEA282260E9B883506C94C2292 /* ParameterEncoding.swift */; };
 		4C7A676DAE95EEAC3787A75349F0862D /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEDEA84359DA556A75D8E416F9F1690 /* SnapKit-dummy.m */; };
 		4D7CE73225C8651F499D936823B5880D /* SnapConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB0DDB7BA17696F4CBC48C6F168440 /* SnapConfigurable.swift */; };
@@ -68,6 +67,7 @@
 		6E0EB9E7FAAEDBB7A73ECF3095F69C4A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD597719B84204F27CB781F0627F47C /* UILayoutSupport+Extensions.swift */; };
 		71DE9DC2FA583526AB4D1FD7F00C099C /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F44FA393372ACA3EDCBEC302E50CF7 /* ConstraintDirectionalInsetTarget.swift */; };
 		75E146C12D1287228A0B493E87CDE31F /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE53E47D7F72069006D61701B2FD9 /* ConstraintMakerRelatable.swift */; };
+		7712B73F879C2B7477954A66DCBD6474 /* Pods-Vibem-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CA9BF82073575749725EC09315EDDE /* Pods-Vibem-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77C9889055A3B32EA13A9616824DB0ED /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFB1EFCD3CFB8B5EB3FB6792A1280B /* ConstraintLayoutGuideDSL.swift */; };
 		7B4CE5C84161E2BFE477F42DFD634382 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4407A05DD7E769AE5271B1DD36F5F44F /* SwiftyJSON.swift */; };
 		7C1702076F3A31D8D2D45A4A9F09B266 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52557DF4E3C89594F3DF46D54C2BEAE0 /* ConstraintMakerEditable.swift */; };
@@ -89,9 +89,9 @@
 		9DCB0984831A59B7123D03A67D961FE9 /* DynamicItem+Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = A169B249639DC7442CE0F778497A6FC9 /* DynamicItem+Behavior.swift */; };
 		A076B70F8250BEAFAA8CE07750BAB9A3 /* AnimatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E73DA824F2E7CD5FDF2B936253557 /* AnimatorCoordinator.swift */; };
 		A270CD9EC3C541FE86E65AEDCEF500CF /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E82B6E6A0ED4A79C01A9D8725C5E7 /* ConstraintLayoutGuide.swift */; };
-		A3D95A4514207D403C339FEDA3020C28 /* Pods-Vibem-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CA9BF82073575749725EC09315EDDE /* Pods-Vibem-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A57789092EB3F57AC49F3E647A298E5C /* DriveAnimateBehaviors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C592C5F7A5DC2148EBED0A5F31A125 /* DriveAnimateBehaviors.swift */; };
 		A66ED57B365A35434C5BAF4B990819B7 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76F97E38AABC5A7260A37FFFA4334661 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A994270E6A00142D39F39001474B8BBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C6137E6EEF0ABD65DC1A4DE9C0F15C /* Foundation.framework */; };
 		AA8023C0CFE561DB8B8D92232C6125B1 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B86E0DC4F3A56D196B39B79924029E /* AlamofireExtended.swift */; };
 		AAE822224E085A6362FA7122C0605078 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39908B348970295FC07EF43C64CFC25F /* RedirectHandler.swift */; };
 		AC35C9341C4BB156BB26FDD237EE3721 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9910FA4E5D170D26770ECD78E626A54 /* ConstraintDirectionalInsets.swift */; };
@@ -136,40 +136,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0B0778686825232A31146FC4F6C6CF8A /* PBXContainerItemProxy */ = {
+		14634150EA16A92D5EF87E3D3C836DD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
 			remoteInfo = SnapKit;
 		};
-		6E7E5559E8FAD0BA51A368FA8DF3BDD6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
-		};
-		DB93D7B839D0B90D8FEBA033DE670CBD /* PBXContainerItemProxy */ = {
+		91151B89B0F983263880F0C525AC159C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
 			remoteInfo = SwiftyJSON;
 		};
-		E837FCDB26E9B0441562E188D1E95830 /* PBXContainerItemProxy */ = {
+		97B37E8D204C4CC75BEC9D2AE7BEF2B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A0CA3B0841360687C00D0E48D3E4C1B9;
 			remoteInfo = UIColor_Hex_Swift;
 		};
-		F84F2B01523CD74A1DD35846A57DCD11 /* PBXContainerItemProxy */ = {
+		9D149FFABCEE4B174E6A25CAC167ECEB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B7392BC8A773CD718B87A2A8EACC0420;
 			remoteInfo = Stellar;
+		};
+		DB00FA3000AB3A182616E60BE9FDD344 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -379,11 +379,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F06D70224E6775377D6E0AEDA0A7FA52 /* Frameworks */ = {
+		E1A93241F688FE3CE606400C51709FA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48C1922FDE367B998E920D6A895990CD /* Foundation.framework in Frameworks */,
+				A994270E6A00142D39F39001474B8BBE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +697,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1EFF6C2C14DBDEA4DBEB8E28B60C2155 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7712B73F879C2B7477954A66DCBD6474 /* Pods-Vibem-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3D7DD627DB5C5AD636646E57B685AFB2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -727,14 +735,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66ED57B365A35434C5BAF4B990819B7 /* SnapKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		81C2AB6175272E2060D7A0EC79ADF79F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3D95A4514207D403C339FEDA3020C28 /* Pods-Vibem-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,21 +823,21 @@
 		};
 		E3ACAD8EBF74D8035B96D63D63DA4A48 /* Pods-Vibem */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B56AC7780E9973056511163A05EE11A3 /* Build configuration list for PBXNativeTarget "Pods-Vibem" */;
+			buildConfigurationList = F529FB717BA67809EFB441098F4250E4 /* Build configuration list for PBXNativeTarget "Pods-Vibem" */;
 			buildPhases = (
-				81C2AB6175272E2060D7A0EC79ADF79F /* Headers */,
-				2DCFEE6D07FB2A31ACCBCBD32DBCF452 /* Sources */,
-				F06D70224E6775377D6E0AEDA0A7FA52 /* Frameworks */,
-				FE3C8BC32E992F9C2B235E0DCD23CAE7 /* Resources */,
+				1EFF6C2C14DBDEA4DBEB8E28B60C2155 /* Headers */,
+				A583A91DF6C8100585099AFD3E08CFDE /* Sources */,
+				E1A93241F688FE3CE606400C51709FA6 /* Frameworks */,
+				FAF18EE8ED65CD1592ACFB608B8242F9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E9E47B7D0886FBDDF93FDE92291F5888 /* PBXTargetDependency */,
-				425E7417F8B6068D8512D85185377114 /* PBXTargetDependency */,
-				AD40370DDF748C5C8CC19B45AC1CAC76 /* PBXTargetDependency */,
-				4610601B1BC8B7C0B4AA59217E8FCE6E /* PBXTargetDependency */,
-				FF251D3F6717F32D9928857083BD1400 /* PBXTargetDependency */,
+				820518843E4C0FE4D2946EAD6FE36DFB /* PBXTargetDependency */,
+				5203EA62E29C5733F0BEB58C55A16720 /* PBXTargetDependency */,
+				3A937DD5B145A8213BA9A938BD39527F /* PBXTargetDependency */,
+				F5834ED211C10EDB7F5FEB5700B90A1A /* PBXTargetDependency */,
+				A190CF68A38F7EF52FAAAD0E5F2680EA /* PBXTargetDependency */,
 			);
 			name = "Pods-Vibem";
 			productName = "Pods-Vibem";
@@ -930,7 +930,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE3C8BC32E992F9C2B235E0DCD23CAE7 /* Resources */ = {
+		FAF18EE8ED65CD1592ACFB608B8242F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -985,14 +985,6 @@
 				D53C3DA75ECAA63A413F3FE9BDC9382C /* UnitBezier.swift in Sources */,
 				06AFC0F22C5C46E14866A8B84FAB799A /* Value+Physical.swift in Sources */,
 				E392C386603AD91EFA0414EB9CC1B169 /* Vectorial.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DCFEE6D07FB2A31ACCBCBD32DBCF452 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14BC4BF9F898B0233267B1880A5E8E86 /* Pods-Vibem-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1051,6 +1043,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A583A91DF6C8100585099AFD3E08CFDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41104FE5C372B8ED97B000C6BF5EE96E /* Pods-Vibem-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA97C7E8121266408747CC86023CA8A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1095,35 +1095,35 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		425E7417F8B6068D8512D85185377114 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SnapKit;
-			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = 0B0778686825232A31146FC4F6C6CF8A /* PBXContainerItemProxy */;
-		};
-		4610601B1BC8B7C0B4AA59217E8FCE6E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
-			targetProxy = DB93D7B839D0B90D8FEBA033DE670CBD /* PBXContainerItemProxy */;
-		};
-		AD40370DDF748C5C8CC19B45AC1CAC76 /* PBXTargetDependency */ = {
+		3A937DD5B145A8213BA9A938BD39527F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Stellar;
 			target = B7392BC8A773CD718B87A2A8EACC0420 /* Stellar */;
-			targetProxy = F84F2B01523CD74A1DD35846A57DCD11 /* PBXContainerItemProxy */;
+			targetProxy = 9D149FFABCEE4B174E6A25CAC167ECEB /* PBXContainerItemProxy */;
 		};
-		E9E47B7D0886FBDDF93FDE92291F5888 /* PBXTargetDependency */ = {
+		5203EA62E29C5733F0BEB58C55A16720 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapKit;
+			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
+			targetProxy = 14634150EA16A92D5EF87E3D3C836DD7 /* PBXContainerItemProxy */;
+		};
+		820518843E4C0FE4D2946EAD6FE36DFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 6E7E5559E8FAD0BA51A368FA8DF3BDD6 /* PBXContainerItemProxy */;
+			targetProxy = DB00FA3000AB3A182616E60BE9FDD344 /* PBXContainerItemProxy */;
 		};
-		FF251D3F6717F32D9928857083BD1400 /* PBXTargetDependency */ = {
+		A190CF68A38F7EF52FAAAD0E5F2680EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UIColor_Hex_Swift;
 			target = A0CA3B0841360687C00D0E48D3E4C1B9 /* UIColor_Hex_Swift */;
-			targetProxy = E837FCDB26E9B0441562E188D1E95830 /* PBXContainerItemProxy */;
+			targetProxy = 97B37E8D204C4CC75BEC9D2AE7BEF2B2 /* PBXContainerItemProxy */;
+		};
+		F5834ED211C10EDB7F5FEB5700B90A1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = 91151B89B0F983263880F0C525AC159C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1272,7 +1272,7 @@
 			};
 			name = Release;
 		};
-		13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */ = {
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1305,16 +1305,13 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
+					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1323,18 +1320,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
-			name = Debug;
+			name = Release;
 		};
 		3C9CF873E2583C6702093C5AD3066E97 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1407,6 +1403,44 @@
 			};
 			name = Debug;
 		};
+		5CE5DCAF5315014D4CD442A102E906DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508B11E13D8CA8BE82862D09986A352B /* Pods-Vibem.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vibem/Pods-Vibem-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vibem/Pods-Vibem.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		73B201A0641E8BDF892BA0B27E0AF833 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3DC7A536E8BF02602056B0414ADFCA8C /* SnapKit.release.xcconfig */;
@@ -1444,45 +1478,7 @@
 			};
 			name = Release;
 		};
-		8396D8B87C94B1F0D97A2F763D6AAD97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 508B11E13D8CA8BE82862D09986A352B /* Pods-Vibem.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Vibem/Pods-Vibem-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Vibem/Pods-Vibem.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		846BF2C74C281E36591EC12C335BBCD4 /* Release */ = {
+		A5BB296FD12DDB5BA0C5E3B2A985885A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2038C8F2716414D26006DFC631800137 /* Pods-Vibem.release.xcconfig */;
 			buildSettings = {
@@ -1499,7 +1495,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Vibem/Pods-Vibem-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1518,66 +1514,6 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		871B6E28ABA34DAE69824AB9D22D3B7D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
@@ -1614,6 +1550,70 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
@@ -1694,8 +1694,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */,
-				871B6E28ABA34DAE69824AB9D22D3B7D /* Release */,
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1745,11 +1745,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B56AC7780E9973056511163A05EE11A3 /* Build configuration list for PBXNativeTarget "Pods-Vibem" */ = {
+		F529FB717BA67809EFB441098F4250E4 /* Build configuration list for PBXNativeTarget "Pods-Vibem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8396D8B87C94B1F0D97A2F763D6AAD97 /* Debug */,
-				846BF2C74C281E36591EC12C335BBCD4 /* Release */,
+				5CE5DCAF5315014D4CD442A102E906DD /* Debug */,
+				A5BB296FD12DDB5BA0C5E3B2A985885A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

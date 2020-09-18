@@ -75,7 +75,7 @@ class Emojis {
     
     static func description(for emoji: Character) -> String? {
         if objects.contains(where: { return $0.emoji == emoji }) {
-            return "DAMN ryan got a cute ass"
+            return "[insert emoji label]"
         } else {
             return nil
         }
